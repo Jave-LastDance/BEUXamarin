@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BeuMobileApp.Views;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,8 +11,8 @@ namespace BeuMobileApp
         public App()
         {
             InitializeComponent();
-
-            MainPage = new AppShell();
+            // MainPage = new AppShell();
+            MainPage = new LoginView();
         }
 
         protected override void OnStart()
