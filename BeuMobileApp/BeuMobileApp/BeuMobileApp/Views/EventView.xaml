@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BeuMobileApp.Views.EventView"
+             xmlns:local="clr-namespace:BeuMobileApp.ViewModels"  
+             xmlns:model="clr-namespace:BeuMobileApp.Models"  
+             x:Name="BrowseItemsPage"
+             Title="Eventos">
+
+
+    <ContentPage.Content>
+        <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
+            <Button VerticalOptions="Center" Text="Eventos" Command="{Binding ItemsCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
