@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BeuMobileApp.TitleViews.EventTitleView"
+             xmlns:pan="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" xmlns:titleviews="clr-namespace:BeuMobileApp.TitleViews" xmlns:viewmodels="clr-namespace:BeuMobileApp.ViewModels" x:DataType="viewmodels:EventTitleViewModel">
+
+    <RelativeLayout>
+        <pan:PancakeView  CornerRadius="16" 
+                          RelativeLayout.WidthConstraint="{ConstraintExpression 
+                          Type=RelativeToParent, Property=Width, Factor=1.0}">
+            <StackLayout Spacing="0">
+                <Image Source="{Binding UrlPoster}"
+                   HeightRequest="160"
+                   Aspect="AspectFill"/>
+                <StackLayout Padding="16"
+                         Spacing="4">
+                    <StackLayout Orientation="Horizontal"
+                             Spacing="16">
+                        <Label Text="{Binding Name}"
+                           MaxLines="1"
+                           HorizontalOptions="FillAndExpand"
+                           FontAttributes="Bold"
+                          />
+
+                        <Label Text="{Binding NameCenter}"
+                           FontSize="Small"
+                           MaxLines="1"/>
+                    </StackLayout>
+
+                    <Label TextColor="#4495FA" FontAttributes="Bold">
+                        <Label.Text>
+                            <MultiBinding StringFormat="{} {0} | {1}">
+                                <Binding Path="Mode"/>
+                                <Binding Path="Category" />
+                            </MultiBinding>
+                        </Label.Text>
+                    </Label>
+
+                    <Label Text="{Binding Description}"
+                           FontSize="Small"
+                           MaxLines="2"/>
+                    
+                    <StackLayout Orientation="Horizontal"
+                             HorizontalOptions="FillAndExpand"
+                             BindableLayout.ItemsSource="{Binding Tags}">
+
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate x:DataType="x:String">
+                                <pan:PancakeView BackgroundColor="#FFD24C"
+                                             Padding="4"
+                                             CornerRadius="8">
+
+                                    <Label Text="{Binding .}"
+                                       TextColor="White"
+                                       FontSize="Small"/>
+
+                                </pan:PancakeView>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </pan:PancakeView>
+        <RelativeLayout.GestureRecognizers>
+            <TapGestureRecognizer NumberOfTapsRequired="1"
+                                  Command="{Binding TapCommand}"/>
+        </RelativeLayout.GestureRecognizers>
+    </RelativeLayout>
+</ContentView>

@@ -11,6 +11,8 @@ namespace BeuMobileApp
         public AppShell()
         {
             InitializeComponent();
+
+            Routing.RegisterRoute(nameof(EventDetailView), typeof(EventDetailView));
            
         }
 

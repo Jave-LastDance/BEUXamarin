@@ -75,6 +75,7 @@ Xamarin.Firebase.Installations.dll
 Xamarin.Firebase.Installations.InterOp.dll
 Xamarin.Firebase.Measurement.Connector.dll
 Xamarin.Firebase.Messaging.dll
+Xamarin.Forms.PancakeView.dll
 Xamarin.Forms.Platform.Android.dll
 Xamarin.Forms.Platform.dll
 Xamarin.Google.Android.DataTransport.TransportApi.dll

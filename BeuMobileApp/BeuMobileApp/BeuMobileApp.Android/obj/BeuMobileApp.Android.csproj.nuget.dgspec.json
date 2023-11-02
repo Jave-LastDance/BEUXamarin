@@ -72,6 +72,10 @@
               "target": "Package",
               "version": "[5.0.0.2612, )"
             },
+            "Xamarin.Forms.PancakeView": {
+              "target": "Package",
+              "version": "[2.3.0.759, )"
+            },
             "Xamarin.GooglePlayServices.Base": {
               "target": "Package",
               "version": "[118.2.0.3, )"
@@ -152,6 +156,10 @@
             "Xamarin.Forms": {
               "target": "Package",
               "version": "[5.0.0.2612, )"
+            },
+            "Xamarin.Forms.PancakeView": {
+              "target": "Package",
+              "version": "[2.3.0.759, )"
             }
           },
           "imports": [

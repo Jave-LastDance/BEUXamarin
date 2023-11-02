@@ -6,6 +6,8 @@ C:\Users\marir\Desktop\BeuXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp\obj\Deb
 C:\Users\marir\Desktop\BeuXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp\obj\Debug\netstandard2.0\BeuMobileApp.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\marir\Desktop\BeuXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\marir\Desktop\BeuXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
+C:\Users\marir\Desktop\BeuXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp\obj\Debug\netstandard2.0\TitleViews\EventTitleView.xaml.g.cs
+C:\Users\marir\Desktop\BeuXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp\obj\Debug\netstandard2.0\Views\EventDetailView.xaml.g.cs
 C:\Users\marir\Desktop\BeuXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp\obj\Debug\netstandard2.0\Views\EventView.xaml.g.cs
 C:\Users\marir\Desktop\BeuXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp\obj\Debug\netstandard2.0\Views\NotificationView.xaml.g.cs
 C:\Users\marir\Desktop\BeuXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp\obj\Debug\netstandard2.0\Views\ProfileView.xaml.g.cs
