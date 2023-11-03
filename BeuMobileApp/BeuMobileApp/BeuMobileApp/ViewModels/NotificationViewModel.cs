@@ -17,7 +17,7 @@ namespace BeuMobileApp.ViewModels
         private async void OnAboutClicked(object obj)
         {
             // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
-            await Shell.Current.GoToAsync($"//{nameof(ProfileView)}");
+            await Shell.Current.GoToAsync($"{nameof(BeaconLocationView)}");
         }
 
     }

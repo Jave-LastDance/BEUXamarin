@@ -4,10 +4,10 @@ using System.Text;
 
 namespace BeuMobileApp.InterfaceBeacons
 {
-    internal interface IIOSScan
+    public interface iOSScan
     {
         void InitializeScannerService();
-        void Startranging();
-        void Stopranging();
+        void startranging();
+        void stopranging();
     }
 }

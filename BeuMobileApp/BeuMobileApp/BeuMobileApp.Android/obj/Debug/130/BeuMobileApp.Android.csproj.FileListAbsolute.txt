@@ -811,3 +811,7 @@ C:\Users\marir\Desktop\BeuXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android
 C:\Users\marir\Desktop\BeuXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\stamp\_GenerateJavaStubs.stamp
 C:\Users\marir\Desktop\BeuXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\marir\Desktop\BeuXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\marir\Desktop\BeuXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\android\src\crc6405fc9578de4bed43\AltBeaconService.java
+C:\Users\marir\Desktop\BeuXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\android\src\crc6405fc9578de4bed43\MainApplication.java
+C:\Users\marir\Desktop\BeuXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\android\src\crc6405fc9578de4bed43\MonitorNotifier.java
+C:\Users\marir\Desktop\BeuXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\android\src\crc6405fc9578de4bed43\RangeNotifier.java

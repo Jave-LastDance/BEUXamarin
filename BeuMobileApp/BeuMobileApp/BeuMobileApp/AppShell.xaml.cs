@@ -13,7 +13,8 @@ namespace BeuMobileApp
             InitializeComponent();
 
             Routing.RegisterRoute(nameof(EventDetailView), typeof(EventDetailView));
-           
+            Routing.RegisterRoute(nameof(BeaconLocationView), typeof(BeaconLocationView));
+
         }
 
     }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BeuMobileApp.InterfaceBeacons
 {
-    internal interface IBeaconAndroid
+    public interface IbeaconAndroid
     {
         void InitializeService();
         void StartMonitoring();
