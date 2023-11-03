@@ -39,7 +39,8 @@
                         BackgroundColor="#D8C72F" 
                         TextColor="White" 
                         Margin="20, 30, 20, 10"
-                        CornerRadius="20" />
+                        CornerRadius="20" 
+                        Clicked="DetallesCuentaButton_Clicked"/>
 
                 <Button Text="Preferencias" 
                         BackgroundColor="#21BDA1" 
