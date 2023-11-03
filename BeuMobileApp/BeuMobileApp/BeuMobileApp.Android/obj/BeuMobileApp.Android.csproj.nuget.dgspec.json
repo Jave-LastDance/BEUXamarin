@@ -1,21 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\marir\\Desktop\\BeuXamarin\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp.Android\\BeuMobileApp.Android.csproj": {}
+    "/Users/carlosloreto/Documents/BE-U/Repositories/Frontend/BEUXamarin/BeuMobileApp/BeuMobileApp/BeuMobileApp.Android/BeuMobileApp.Android.csproj": {}
   },
   "projects": {
-    "C:\\Users\\marir\\Desktop\\BeuXamarin\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp.Android\\BeuMobileApp.Android.csproj": {
+    "/Users/carlosloreto/Documents/BE-U/Repositories/Frontend/BEUXamarin/BeuMobileApp/BeuMobileApp/BeuMobileApp.Android/BeuMobileApp.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marir\\Desktop\\BeuXamarin\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp.Android\\BeuMobileApp.Android.csproj",
+        "projectUniqueName": "/Users/carlosloreto/Documents/BE-U/Repositories/Frontend/BEUXamarin/BeuMobileApp/BeuMobileApp/BeuMobileApp.Android/BeuMobileApp.Android.csproj",
         "projectName": "BeuMobileApp.Android",
-        "projectPath": "C:\\Users\\marir\\Desktop\\BeuXamarin\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp.Android\\BeuMobileApp.Android.csproj",
-        "packagesPath": "C:\\Users\\marir\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marir\\Desktop\\BeuXamarin\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp.Android\\obj\\",
+        "projectPath": "/Users/carlosloreto/Documents/BE-U/Repositories/Frontend/BEUXamarin/BeuMobileApp/BeuMobileApp/BeuMobileApp.Android/BeuMobileApp.Android.csproj",
+        "packagesPath": "/Users/carlosloreto/.nuget/packages/",
+        "outputPath": "/Users/carlosloreto/Documents/BE-U/Repositories/Frontend/BEUXamarin/BeuMobileApp/BeuMobileApp/BeuMobileApp.Android/obj/",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
-          "C:\\Users\\marir\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/carlosloreto/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "monoandroid13.0"
@@ -26,8 +26,8 @@
         "frameworks": {
           "monoandroid13.0": {
             "projectReferences": {
-              "C:\\Users\\marir\\Desktop\\BeuXamarin\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp.csproj": {
-                "projectPath": "C:\\Users\\marir\\Desktop\\BeuXamarin\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp.csproj"
+              "/Users/carlosloreto/Documents/BE-U/Repositories/Frontend/BEUXamarin/BeuMobileApp/BeuMobileApp/BeuMobileApp/BeuMobileApp.csproj": {
+                "projectPath": "/Users/carlosloreto/Documents/BE-U/Repositories/Frontend/BEUXamarin/BeuMobileApp/BeuMobileApp/BeuMobileApp/BeuMobileApp.csproj"
               }
             }
           }
@@ -88,23 +88,22 @@
         }
       }
     },
-    "C:\\Users\\marir\\Desktop\\BeuXamarin\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp.csproj": {
+    "/Users/carlosloreto/Documents/BE-U/Repositories/Frontend/BEUXamarin/BeuMobileApp/BeuMobileApp/BeuMobileApp/BeuMobileApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marir\\Desktop\\BeuXamarin\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp.csproj",
+        "projectUniqueName": "/Users/carlosloreto/Documents/BE-U/Repositories/Frontend/BEUXamarin/BeuMobileApp/BeuMobileApp/BeuMobileApp/BeuMobileApp.csproj",
         "projectName": "BeuMobileApp",
-        "projectPath": "C:\\Users\\marir\\Desktop\\BeuXamarin\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp.csproj",
-        "packagesPath": "C:\\Users\\marir\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marir\\Desktop\\BeuXamarin\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp\\obj\\",
+        "projectPath": "/Users/carlosloreto/Documents/BE-U/Repositories/Frontend/BEUXamarin/BeuMobileApp/BeuMobileApp/BeuMobileApp/BeuMobileApp.csproj",
+        "packagesPath": "/Users/carlosloreto/.nuget/packages/",
+        "outputPath": "/Users/carlosloreto/Documents/BE-U/Repositories/Frontend/BEUXamarin/BeuMobileApp/BeuMobileApp/BeuMobileApp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\marir\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/carlosloreto/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -172,12 +171,11 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/Users/carlosloreto/Library/Caches/VisualStudio/17.0/MSBuild/31928_3/RuntimeIdentifierGraph.json"
         }
       }
     }

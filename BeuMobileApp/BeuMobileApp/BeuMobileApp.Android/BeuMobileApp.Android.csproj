@@ -16,7 +16,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v13.0</TargetFrameworkVersion>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidUseAapt2>true</AndroidUseAapt2>
@@ -124,7 +123,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BeuMobileApp\BeuMobileApp.csproj">
-      <Project>{26E74673-1872-4BB4-868E-2C56F20382D4}</Project>
+      <Project>{FBCE9808-A1CE-4425-86E6-4CFDA1A2E187}</Project>
       <Name>BeuMobileApp</Name>
     </ProjectReference>
   </ItemGroup>

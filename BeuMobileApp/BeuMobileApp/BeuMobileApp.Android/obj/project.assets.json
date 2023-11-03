@@ -8989,20 +8989,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\marir\\.nuget\\packages\\": {}
+    "/Users/carlosloreto/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\marir\\Desktop\\BeuXamarin\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp.Android\\BeuMobileApp.Android.csproj",
+      "projectUniqueName": "/Users/carlosloreto/Documents/BE-U/Repositories/Frontend/BEUXamarin/BeuMobileApp/BeuMobileApp/BeuMobileApp.Android/BeuMobileApp.Android.csproj",
       "projectName": "BeuMobileApp.Android",
-      "projectPath": "C:\\Users\\marir\\Desktop\\BeuXamarin\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp.Android\\BeuMobileApp.Android.csproj",
-      "packagesPath": "C:\\Users\\marir\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\marir\\Desktop\\BeuXamarin\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp.Android\\obj\\",
+      "projectPath": "/Users/carlosloreto/Documents/BE-U/Repositories/Frontend/BEUXamarin/BeuMobileApp/BeuMobileApp/BeuMobileApp.Android/BeuMobileApp.Android.csproj",
+      "packagesPath": "/Users/carlosloreto/.nuget/packages/",
+      "outputPath": "/Users/carlosloreto/Documents/BE-U/Repositories/Frontend/BEUXamarin/BeuMobileApp/BeuMobileApp/BeuMobileApp.Android/obj/",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\marir\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/carlosloreto/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "monoandroid13.0"
@@ -9013,8 +9013,8 @@
       "frameworks": {
         "monoandroid13.0": {
           "projectReferences": {
-            "C:\\Users\\marir\\Desktop\\BeuXamarin\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp.csproj": {
-              "projectPath": "C:\\Users\\marir\\Desktop\\BeuXamarin\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp.csproj"
+            "/Users/carlosloreto/Documents/BE-U/Repositories/Frontend/BEUXamarin/BeuMobileApp/BeuMobileApp/BeuMobileApp/BeuMobileApp.csproj": {
+              "projectPath": "/Users/carlosloreto/Documents/BE-U/Repositories/Frontend/BEUXamarin/BeuMobileApp/BeuMobileApp/BeuMobileApp/BeuMobileApp.csproj"
             }
           }
         }
