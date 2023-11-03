@@ -71,6 +71,19 @@
           }
         }
       },
+      "Plugin.FirebasePushNotification/3.4.35": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Plugin.FirebasePushNotification.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Plugin.FirebasePushNotification.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Plugin.Permissions/6.0.1": {
         "type": "package",
         "dependencies": {
@@ -1219,6 +1232,29 @@
         "newtonsoft.json.13.0.3.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "packageIcon.png"
+      ]
+    },
+    "Plugin.FirebasePushNotification/3.4.35": {
+      "sha512": "utbKf6Lp89dla6/q82BVMejBnIlUsCXCgtVDW2e4+laqHsWv5yQLp1jX7qHI1poRxwbYvjy9lM/Y5cnf6GF/5Q==",
+      "type": "package",
+      "path": "plugin.firebasepushnotification/3.4.35",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "icon.png",
+        "lib/monoandroid12.0/Plugin.FirebasePushNotification.dll",
+        "lib/monoandroid12.0/Plugin.FirebasePushNotification.pdb",
+        "lib/monoandroid12.0/Plugin.FirebasePushNotification.xml",
+        "lib/netstandard2.0/Plugin.FirebasePushNotification.dll",
+        "lib/netstandard2.0/Plugin.FirebasePushNotification.pdb",
+        "lib/netstandard2.0/Plugin.FirebasePushNotification.xml",
+        "lib/xamarinios10/Plugin.FirebasePushNotification.dll",
+        "lib/xamarinios10/Plugin.FirebasePushNotification.pdb",
+        "lib/xamarinios10/Plugin.FirebasePushNotification.xml",
+        "plugin.firebasepushnotification.3.4.35.nupkg.sha512",
+        "plugin.firebasepushnotification.nuspec",
+        "readme.txt"
       ]
     },
     "Plugin.Permissions/6.0.1": {
@@ -3710,6 +3746,7 @@
       "Behaviors.Forms >= 1.4.0",
       "NETStandard.Library >= 2.0.3",
       "Newtonsoft.Json >= 13.0.3",
+      "Plugin.FirebasePushNotification >= 3.4.35",
       "Plugin.Permissions >= 6.0.1",
       "PropertyChanged.Fody >= 4.1.0",
       "System.Net.Http >= 4.3.4",
@@ -3769,6 +3806,10 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[13.0.3, )"
+          },
+          "Plugin.FirebasePushNotification": {
+            "target": "Package",
+            "version": "[3.4.35, )"
           },
           "Plugin.Permissions": {
             "target": "Package",

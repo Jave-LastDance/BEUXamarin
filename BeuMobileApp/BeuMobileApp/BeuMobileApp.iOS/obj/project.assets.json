@@ -887,6 +887,7 @@
         "dependencies": {
           "Behaviors.Forms": "1.4.0",
           "Newtonsoft.Json": "13.0.3",
+          "Plugin.FirebasePushNotification": "3.4.35",
           "Plugin.Permissions": "6.0.1",
           "PropertyChanged.Fody": "4.1.0",
           "System.Net.Http": "4.3.4",
@@ -1724,6 +1725,7 @@
         "dependencies": {
           "Behaviors.Forms": "1.4.0",
           "Newtonsoft.Json": "13.0.3",
+          "Plugin.FirebasePushNotification": "3.4.35",
           "Plugin.Permissions": "6.0.1",
           "PropertyChanged.Fody": "4.1.0",
           "System.Net.Http": "4.3.4",
@@ -2561,6 +2563,7 @@
         "dependencies": {
           "Behaviors.Forms": "1.4.0",
           "Newtonsoft.Json": "13.0.3",
+          "Plugin.FirebasePushNotification": "3.4.35",
           "Plugin.Permissions": "6.0.1",
           "PropertyChanged.Fody": "4.1.0",
           "System.Net.Http": "4.3.4",
@@ -3398,6 +3401,7 @@
         "dependencies": {
           "Behaviors.Forms": "1.4.0",
           "Newtonsoft.Json": "13.0.3",
+          "Plugin.FirebasePushNotification": "3.4.35",
           "Plugin.Permissions": "6.0.1",
           "PropertyChanged.Fody": "4.1.0",
           "System.Net.Http": "4.3.4",
@@ -4235,6 +4239,7 @@
         "dependencies": {
           "Behaviors.Forms": "1.4.0",
           "Newtonsoft.Json": "13.0.3",
+          "Plugin.FirebasePushNotification": "3.4.35",
           "Plugin.Permissions": "6.0.1",
           "PropertyChanged.Fody": "4.1.0",
           "System.Net.Http": "4.3.4",

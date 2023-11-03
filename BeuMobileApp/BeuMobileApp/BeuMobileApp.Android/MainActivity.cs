@@ -9,6 +9,7 @@ using Plugin.CurrentActivity;
 using Plugin.Permissions;
 using BeuMobileApp.InterfaceBeacons;
 using Xamarin.Forms;
+using Plugin.FirebasePushNotification;
 
 namespace BeuMobileApp.Droid
 {
@@ -26,6 +27,7 @@ namespace BeuMobileApp.Droid
           
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
+            FirebasePushNotificationManager.ProcessIntent(this, Intent);
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {

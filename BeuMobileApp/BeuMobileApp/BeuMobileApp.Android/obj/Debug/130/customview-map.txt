@@ -30,6 +30,7 @@ FrameLayout;C:\Users\marir\Desktop\BeuXamarin\BeuMobileApp\BeuMobileApp\BeuMobil
 item;C:\Users\marir\Desktop\BeuXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\lp\78\jl\res\values\styles.xml
 LinearLayout;C:\Users\marir\Desktop\BeuXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\lp\78\jl\res\layout\bottomtablayout.xml
 paths;C:\Users\marir\Desktop\BeuXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\lp\65\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+resources;C:\Users\marir\Desktop\BeuXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\googsvcsjson\values\goog_svcs_json.xml
 resources;C:\Users\marir\Desktop\BeuXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\lp\78\jl\res\values\attrs.xml
 resources;C:\Users\marir\Desktop\BeuXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\lp\78\jl\res\values\strings.xml
 resources;C:\Users\marir\Desktop\BeuXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\lp\78\jl\res\values\styles.xml
@@ -39,6 +40,7 @@ set;C:\Users\marir\Desktop\BeuXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.And
 set;C:\Users\marir\Desktop\BeuXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\lp\78\jl\res\anim\enterfromright.xml
 set;C:\Users\marir\Desktop\BeuXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\lp\78\jl\res\anim\exittoleft.xml
 set;C:\Users\marir\Desktop\BeuXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\lp\78\jl\res\anim\exittoright.xml
+string;C:\Users\marir\Desktop\BeuXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\googsvcsjson\values\goog_svcs_json.xml
 string;C:\Users\marir\Desktop\BeuXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\lp\78\jl\res\values\strings.xml
 style;C:\Users\marir\Desktop\BeuXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\lp\78\jl\res\values\styles.xml
 style;obj\Debug\130\res\values\styles.xml

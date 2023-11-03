@@ -1298,17 +1298,17 @@ public final class R {
 		public static final int character_counter_pattern = 0x7f0e0028;
 		public static final int fab_transformation_scrim_behavior = 0x7f0e0042;
 		public static final int fab_transformation_sheet_behavior = 0x7f0e0043;
-		public static final int hide_bottom_view_on_scroll_behavior = 0x7f0e0048;
-		public static final int mtrl_chip_close_icon_content_description = 0x7f0e0060;
-		public static final int nav_app_bar_navigate_up_description = 0x7f0e0082;
-		public static final int nav_app_bar_open_drawer_description = 0x7f0e0083;
-		public static final int password_toggle_content_description = 0x7f0e0086;
-		public static final int path_password_eye = 0x7f0e0087;
-		public static final int path_password_eye_mask_strike_through = 0x7f0e0088;
-		public static final int path_password_eye_mask_visible = 0x7f0e0089;
-		public static final int path_password_strike_through = 0x7f0e008a;
-		public static final int search_menu_title = 0x7f0e008c;
-		public static final int status_bar_notification_info_overflow = 0x7f0e008d;
+		public static final int hide_bottom_view_on_scroll_behavior = 0x7f0e004d;
+		public static final int mtrl_chip_close_icon_content_description = 0x7f0e0065;
+		public static final int nav_app_bar_navigate_up_description = 0x7f0e0087;
+		public static final int nav_app_bar_open_drawer_description = 0x7f0e0088;
+		public static final int password_toggle_content_description = 0x7f0e008b;
+		public static final int path_password_eye = 0x7f0e008c;
+		public static final int path_password_eye_mask_strike_through = 0x7f0e008d;
+		public static final int path_password_eye_mask_visible = 0x7f0e008e;
+		public static final int path_password_strike_through = 0x7f0e008f;
+		public static final int search_menu_title = 0x7f0e0092;
+		public static final int status_bar_notification_info_overflow = 0x7f0e0093;
 	}
 	public static final class style {
 		public static final int AlertDialog_AppCompat = 0x7f0f0000;
