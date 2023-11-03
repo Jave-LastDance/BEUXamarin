@@ -61,7 +61,7 @@ namespace BeuMobileApp.ViewModels
             }
             catch (Exception ex)
             {
-                // Manejar el error, por ejemplo: mostrar un mensaje al usuario
+
                 Console.WriteLine("Error al cargar eventos: " + ex.Message);
             }
             finally
