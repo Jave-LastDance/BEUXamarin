@@ -13,7 +13,7 @@ namespace BeuMobileApp.ViewModels
     [QueryProperty(nameof(EventIndex), nameof(EventIndex))]
     public class EventDetailViewModel : BaseViewModel
     {
-        private int eventIndex;
+        public int EventId;
 
         private readonly EventService eventService;
         public ObservableCollection<EventTitleViewModel> Events { get; }
@@ -51,12 +51,14 @@ namespace BeuMobileApp.ViewModels
  
         public int EventIndex
         {
-            get => eventIndex;
+            get => EventId;
             set
             {
-                SetProperty(ref eventIndex, value);
-                Console.WriteLine("EventId: DENTOOOO " + eventIndex);
-          
+                if (EventId != value)
+                {
+                    EventId = value;                   
+                    LoadEventData(EventId);
+                }
             }
         }
 
@@ -65,19 +67,15 @@ namespace BeuMobileApp.ViewModels
         public EventDetailViewModel()
         {
 
-            Console.WriteLine("Este es el indice: " + EventIndex);
             eventService = new EventService();
             Events = new ObservableCollection<EventTitleViewModel>();
-     
-            LoadEventData(eventIndex);
 
         }
 
-        async void LoadEventData(int eventIndex)
+        async void LoadEventData(int EventIndex)
         {
-            Console.WriteLine("Este es el indice: " + EventIndex);
-            var events = await eventService.GetEvents();
-            var selectedEvent = events.ElementAtOrDefault(EventIndex);
+            Console.WriteLine("Este es el indice en DeatilEvents: " + EventIndex);
+            var selectedEvent = await eventService.GetEvent(EventIndex);
             if (selectedEvent != null)
             {
                 Name = selectedEvent.Name;
@@ -96,7 +94,7 @@ namespace BeuMobileApp.ViewModels
                 Tags = SplitTags(selectedEvent.Tags);
                 UrlPhotos = selectedEvent.Url_photos;
                 CenterImage = CenterName + "Logo.png";
-
+                Reviews = selectedEvent.Reviews;
             }
 
         }

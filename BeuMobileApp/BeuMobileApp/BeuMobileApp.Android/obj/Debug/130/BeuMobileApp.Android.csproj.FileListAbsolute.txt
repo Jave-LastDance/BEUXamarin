@@ -1,4 +1,3 @@
-C:\Users\marir\Desktop\BeuXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\app_shared_libraries\x86_64\libxamarin-app.so
 C:\Users\marir\Desktop\BeuXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\bin\Debug\BeuMobileApp.Android.dll
 C:\Users\marir\Desktop\BeuXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\bin\Debug\BeuMobileApp.Android.pdb
 C:\Users\marir\Desktop\BeuXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\bin\Debug\co.edu.javeriana.beu.mobileapp.apk
@@ -807,6 +806,7 @@ C:\Users\marir\Desktop\BeuXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android
 C:\Users\marir\Desktop\BeuXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\app_shared_libraries\arm64-v8a\libxamarin-app.so
 C:\Users\marir\Desktop\BeuXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\app_shared_libraries\armeabi-v7a\libxamarin-app.so
 C:\Users\marir\Desktop\BeuXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\app_shared_libraries\x86\libxamarin-app.so
+C:\Users\marir\Desktop\BeuXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\app_shared_libraries\x86_64\libxamarin-app.so
 C:\Users\marir\Desktop\BeuXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\android\bin\classes.dex
 C:\Users\marir\Desktop\BeuXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\android\bin\classes2.dex
 C:\Users\marir\Desktop\BeuXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\stamp\_CleanIntermediateIfNeeded.stamp

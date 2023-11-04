@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,7 +17,7 @@ namespace BeuMobileApp.Services
         {
             client = new HttpClient
             {
-                BaseAddress = new Uri("http://192.168.56.1:8081/eventosPUJ/")
+                BaseAddress = new Uri("http://192.168.1.100:8081/eventosPUJ/")
             };
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Add("Accept", "application/json");
@@ -52,6 +53,33 @@ namespace BeuMobileApp.Services
             return result;
         }
 
+        public async Task<Event> GetEvent(int Id) { 
+                Event evn=null;
+                try
+                {
+        
+                    HttpResponseMessage response = await client.GetAsync("evento/"+Id);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        Console.WriteLine("Respuesta exitosa de la API.");
+                        string content = await response.Content.ReadAsStringAsync();
+                        Console.WriteLine("Contenido de la respuesta de la API:");
+                        Console.WriteLine(content);
+                        evn = JsonConvert.DeserializeObject<Event>(content);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Error al obtener eventos: " + response.StatusCode);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error al obtener eventos: " + ex.Message);
+                }
+
+            return evn;
+        }
 
     }
+
 }

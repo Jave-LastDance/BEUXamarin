@@ -8989,20 +8989,20 @@
     ]
   },
   "packageFolders": {
-    "/Users/carlosloreto/.nuget/packages/": {}
+    "C:\\Users\\marir\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/carlosloreto/Documents/BE-U/Repositories/Frontend/BEUXamarin/BeuMobileApp/BeuMobileApp/BeuMobileApp.Android/BeuMobileApp.Android.csproj",
+      "projectUniqueName": "C:\\Users\\marir\\Desktop\\BeuXamarin\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp.Android\\BeuMobileApp.Android.csproj",
       "projectName": "BeuMobileApp.Android",
-      "projectPath": "/Users/carlosloreto/Documents/BE-U/Repositories/Frontend/BEUXamarin/BeuMobileApp/BeuMobileApp/BeuMobileApp.Android/BeuMobileApp.Android.csproj",
-      "packagesPath": "/Users/carlosloreto/.nuget/packages/",
-      "outputPath": "/Users/carlosloreto/Documents/BE-U/Repositories/Frontend/BEUXamarin/BeuMobileApp/BeuMobileApp/BeuMobileApp.Android/obj/",
+      "projectPath": "C:\\Users\\marir\\Desktop\\BeuXamarin\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp.Android\\BeuMobileApp.Android.csproj",
+      "packagesPath": "C:\\Users\\marir\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\marir\\Desktop\\BeuXamarin\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "/Users/carlosloreto/.config/NuGet/NuGet.Config"
+        "C:\\Users\\marir\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "monoandroid13.0"
@@ -9013,8 +9013,8 @@
       "frameworks": {
         "monoandroid13.0": {
           "projectReferences": {
-            "/Users/carlosloreto/Documents/BE-U/Repositories/Frontend/BEUXamarin/BeuMobileApp/BeuMobileApp/BeuMobileApp/BeuMobileApp.csproj": {
-              "projectPath": "/Users/carlosloreto/Documents/BE-U/Repositories/Frontend/BEUXamarin/BeuMobileApp/BeuMobileApp/BeuMobileApp/BeuMobileApp.csproj"
+            "C:\\Users\\marir\\Desktop\\BeuXamarin\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp.csproj": {
+              "projectPath": "C:\\Users\\marir\\Desktop\\BeuXamarin\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp.csproj"
             }
           }
         }
@@ -9027,9 +9027,21 @@
             "target": "Package",
             "version": "[1.4.0, )"
           },
+          "Behaviors.Forms": {
+            "target": "Package",
+            "version": "[1.4.0, )"
+          },
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[13.0.3, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.3, )"
+          },
+          "Plugin.CurrentActivity": {
+            "target": "Package",
+            "version": "[2.1.0.4, )"
           },
           "Plugin.CurrentActivity": {
             "target": "Package",
@@ -9039,9 +9051,21 @@
             "target": "Package",
             "version": "[3.4.35, )"
           },
+          "Plugin.FirebasePushNotification": {
+            "target": "Package",
+            "version": "[3.4.35, )"
+          },
           "Plugin.Permissions": {
             "target": "Package",
             "version": "[6.0.1, )"
+          },
+          "Plugin.Permissions": {
+            "target": "Package",
+            "version": "[6.0.1, )"
+          },
+          "PropertyChanged.Fody": {
+            "target": "Package",
+            "version": "[4.1.0, )"
           },
           "PropertyChanged.Fody": {
             "target": "Package",
@@ -9051,9 +9075,21 @@
             "target": "Package",
             "version": "[4.3.4, )"
           },
+          "System.Net.Http": {
+            "target": "Package",
+            "version": "[4.3.4, )"
+          },
           "Xamarin.Essentials": {
             "target": "Package",
             "version": "[1.8.0, )"
+          },
+          "Xamarin.Essentials": {
+            "target": "Package",
+            "version": "[1.8.0, )"
+          },
+          "Xamarin.Forms": {
+            "target": "Package",
+            "version": "[5.0.0.2612, )"
           },
           "Xamarin.Forms": {
             "target": "Package",
@@ -9063,9 +9099,21 @@
             "target": "Package",
             "version": "[2.3.0.759, )"
           },
+          "Xamarin.Forms.PancakeView": {
+            "target": "Package",
+            "version": "[2.3.0.759, )"
+          },
           "Xamarin.GooglePlayServices.Base": {
             "target": "Package",
             "version": "[118.2.0.3, )"
+          },
+          "Xamarin.GooglePlayServices.Base": {
+            "target": "Package",
+            "version": "[118.2.0.3, )"
+          },
+          "xamarin-android-altbeacon-library": {
+            "target": "Package",
+            "version": "[2.17.1, )"
           },
           "xamarin-android-altbeacon-library": {
             "target": "Package",

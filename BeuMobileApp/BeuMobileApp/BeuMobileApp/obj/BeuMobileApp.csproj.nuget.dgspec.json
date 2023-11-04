@@ -1,25 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "/Users/carlosloreto/Documents/BE-U/Repositories/Frontend/BEUXamarin/BeuMobileApp/BeuMobileApp/BeuMobileApp/BeuMobileApp.csproj": {}
+    "C:\\Users\\marir\\Desktop\\BeuXamarin\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp.csproj": {}
   },
   "projects": {
-    "/Users/carlosloreto/Documents/BE-U/Repositories/Frontend/BEUXamarin/BeuMobileApp/BeuMobileApp/BeuMobileApp/BeuMobileApp.csproj": {
+    "C:\\Users\\marir\\Desktop\\BeuXamarin\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/carlosloreto/Documents/BE-U/Repositories/Frontend/BEUXamarin/BeuMobileApp/BeuMobileApp/BeuMobileApp/BeuMobileApp.csproj",
+        "projectUniqueName": "C:\\Users\\marir\\Desktop\\BeuXamarin\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp.csproj",
         "projectName": "BeuMobileApp",
-        "projectPath": "/Users/carlosloreto/Documents/BE-U/Repositories/Frontend/BEUXamarin/BeuMobileApp/BeuMobileApp/BeuMobileApp/BeuMobileApp.csproj",
-        "packagesPath": "/Users/carlosloreto/.nuget/packages/",
-        "outputPath": "/Users/carlosloreto/Documents/BE-U/Repositories/Frontend/BEUXamarin/BeuMobileApp/BeuMobileApp/BeuMobileApp/obj/",
+        "projectPath": "C:\\Users\\marir\\Desktop\\BeuXamarin\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp.csproj",
+        "packagesPath": "C:\\Users\\marir\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\marir\\Desktop\\BeuXamarin\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/carlosloreto/.config/NuGet/NuGet.Config"
+          "C:\\Users\\marir\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -87,11 +88,12 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "/Users/carlosloreto/Library/Caches/VisualStudio/17.0/MSBuild/31928_3/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

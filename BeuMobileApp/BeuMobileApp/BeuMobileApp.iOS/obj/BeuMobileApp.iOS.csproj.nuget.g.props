@@ -4,17 +4,17 @@
     <RestoreSuccess Condition=" '$(RestoreSuccess)' == '' ">True</RestoreSuccess>
     <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
     <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
-    <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">/Users/carlosloreto/.nuget/packages/</NuGetPackageRoot>
-    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">/Users/carlosloreto/.nuget/packages/</NuGetPackageFolders>
+    <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\marir\.nuget\packages\</NuGetPackageFolders>
     <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
-    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">6.4.0</NuGetToolVersion>
+    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">6.7.0</NuGetToolVersion>
   </PropertyGroup>
   <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <SourceRoot Include="/Users/carlosloreto/.nuget/packages/" />
+    <SourceRoot Include="C:\Users\marir\.nuget\packages\" />
   </ItemGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <Import Project="$(NuGetPackageRoot)xamarin.forms/5.0.0.2612/buildTransitive/Xamarin.Forms.props" Condition="Exists('$(NuGetPackageRoot)xamarin.forms/5.0.0.2612/buildTransitive/Xamarin.Forms.props')" />
-    <Import Project="$(NuGetPackageRoot)xamarin.build.download/0.10.0/buildTransitive/Xamarin.Build.Download.props" Condition="Exists('$(NuGetPackageRoot)xamarin.build.download/0.10.0/buildTransitive/Xamarin.Build.Download.props')" />
-    <Import Project="$(NuGetPackageRoot)propertychanged.fody/4.1.0/build/PropertyChanged.Fody.props" Condition="Exists('$(NuGetPackageRoot)propertychanged.fody/4.1.0/build/PropertyChanged.Fody.props')" />
+    <Import Project="$(NuGetPackageRoot)xamarin.forms\5.0.0.2612\buildTransitive\Xamarin.Forms.props" Condition="Exists('$(NuGetPackageRoot)xamarin.forms\5.0.0.2612\buildTransitive\Xamarin.Forms.props')" />
+    <Import Project="$(NuGetPackageRoot)xamarin.build.download\0.10.0\buildTransitive\Xamarin.Build.Download.props" Condition="Exists('$(NuGetPackageRoot)xamarin.build.download\0.10.0\buildTransitive\Xamarin.Build.Download.props')" />
+    <Import Project="$(NuGetPackageRoot)propertychanged.fody\4.1.0\build\PropertyChanged.Fody.props" Condition="Exists('$(NuGetPackageRoot)propertychanged.fody\4.1.0\build\PropertyChanged.Fody.props')" />
   </ImportGroup>
 </Project>

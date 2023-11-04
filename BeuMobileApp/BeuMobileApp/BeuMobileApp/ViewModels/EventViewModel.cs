@@ -47,14 +47,14 @@ namespace BeuMobileApp.ViewModels
                 if (events != null)
                 {
 
-                    int index = 0;
+                  
                     foreach (var evnt in events)
                     {
                         System.Diagnostics.Debug.WriteLine($"Name: {evnt.Name}"); 
                         System.Diagnostics.Debug.WriteLine($"Description: {evnt.Description}");
-                        var eventTitleViewModel = new EventTitleViewModel(evnt, index);
+                        var eventTitleViewModel = new EventTitleViewModel(evnt);
                         Events.Add(eventTitleViewModel);
-                        index++;
+                       
                     }
 
                 }
