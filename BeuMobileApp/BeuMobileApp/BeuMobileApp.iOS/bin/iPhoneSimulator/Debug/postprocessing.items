@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <_PostProcessingItem Include="BeuMobileApp.iOS.app/BeuMobileApp.iOS">
+      <BCSymbolMapName>BeuMobileApp.iOS.bcsymbolmap</BCSymbolMapName>
+      <NoDSymUtil>true</NoDSymUtil>
+      <dSYMSourcePathExists>false</dSYMSourcePathExists>
+      <NoSymbolStrip>true</NoSymbolStrip>
+      <dSYMInfoPlistRelativePath>BeuMobileApp.iOS.app.dSYM\Contents\Info.plist</dSYMInfoPlistRelativePath>
+      <SymbolFile>/Users/carlosloreto/Documents/BE-U/Repositories/Frontend/BEUXamarin/BeuMobileApp/BeuMobileApp/BeuMobileApp.iOS/obj/iPhoneSimulator/Debug/mtouch-symbols.list</SymbolFile>
+      <DSymName>BeuMobileApp.iOS.app.dSYM</DSymName>
+      <SourceProjectPath>/Users/carlosloreto/Documents/BE-U/Repositories/Frontend/BEUXamarin/BeuMobileApp/BeuMobileApp/BeuMobileApp.iOS</SourceProjectPath>
+    </_PostProcessingItem>
+  </ItemGroup>
+</Project>

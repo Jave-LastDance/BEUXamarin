@@ -12,11 +12,13 @@
           "Behaviors.Forms": "1.4.0",
           "NETStandard.Library": "2.0.3",
           "Newtonsoft.Json": "13.0.3",
+          "Plugin.FirebasePushNotification": "3.4.35",
           "Plugin.Permissions": "6.0.1",
           "PropertyChanged.Fody": "4.1.0",
           "System.Net.Http": "4.3.4",
           "Xamarin.Essentials": "1.8.0",
-          "Xamarin.Forms": "5.0.0.2612"
+          "Xamarin.Forms": "5.0.0.2612",
+          "Xamarin.Forms.PancakeView": "2.3.0.759"
         },
         "runtime": {
           "BeuMobileApp.dll": {}
@@ -47,6 +49,14 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {
             "assemblyVersion": "13.0.0.0",
             "fileVersion": "13.0.3.27908"
+          }
+        }
+      },
+      "Plugin.FirebasePushNotification/3.4.35": {
+        "runtime": {
+          "lib/netstandard2.0/Plugin.FirebasePushNotification.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.3.0.0"
           }
         }
       },
@@ -131,6 +141,17 @@
         "runtime": {
           "lib/netstandard1.3/System.Collections.Concurrent.dll": {
             "assemblyVersion": "4.0.13.0",
+            "fileVersion": "4.6.24705.1"
+          }
+        }
+      },
+      "System.ComponentModel/4.3.0": {
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.ComponentModel.dll": {
+            "assemblyVersion": "4.0.2.0",
             "fileVersion": "4.6.24705.1"
           }
         }
@@ -538,6 +559,18 @@
             "fileVersion": "5.0.0.993"
           }
         }
+      },
+      "Xamarin.Forms.PancakeView/2.3.0.759": {
+        "dependencies": {
+          "System.ComponentModel": "4.3.0",
+          "Xamarin.Forms": "5.0.0.2612"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.PancakeView.dll": {
+            "assemblyVersion": "2.0.1.0",
+            "fileVersion": "2.0.1.0"
+          }
+        }
       }
     }
   },
@@ -588,6 +621,13 @@
       "sha512": "sha512-HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
       "path": "newtonsoft.json/13.0.3",
       "hashPath": "newtonsoft.json.13.0.3.nupkg.sha512"
+    },
+    "Plugin.FirebasePushNotification/3.4.35": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-utbKf6Lp89dla6/q82BVMejBnIlUsCXCgtVDW2e4+laqHsWv5yQLp1jX7qHI1poRxwbYvjy9lM/Y5cnf6GF/5Q==",
+      "path": "plugin.firebasepushnotification/3.4.35",
+      "hashPath": "plugin.firebasepushnotification.3.4.35.nupkg.sha512"
     },
     "Plugin.Permissions/6.0.1": {
       "type": "package",
@@ -721,6 +761,13 @@
       "sha512": "sha512-ztl69Xp0Y/UXCL+3v3tEU+lIy+bvjKNUmopn1wep/a291pVPK7dxBd6T7WnlQqRog+d1a/hSsgRsmFnIBKTPLQ==",
       "path": "system.collections.concurrent/4.3.0",
       "hashPath": "system.collections.concurrent.4.3.0.nupkg.sha512"
+    },
+    "System.ComponentModel/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VyGn1jGRZVfxnh8EdvDCi71v3bMXrsu8aYJOwoV7SNDLVhiEqwP86pPMyRGsDsxhXAm2b3o9OIqeETfN5qfezw==",
+      "path": "system.componentmodel/4.3.0",
+      "hashPath": "system.componentmodel.4.3.0.nupkg.sha512"
     },
     "System.Diagnostics.Debug/4.3.0": {
       "type": "package",
@@ -952,6 +999,13 @@
       "sha512": "sha512-zQcy3NJgRJnLRWQZ2TZPCgDoTDHoYskHLutKDvz1pVNtvJ8U7kkg4mE2XATs3dAkQ+oWoqB4VOBGRk9uAfoRMw==",
       "path": "xamarin.forms/5.0.0.2612",
       "hashPath": "xamarin.forms.5.0.0.2612.nupkg.sha512"
+    },
+    "Xamarin.Forms.PancakeView/2.3.0.759": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TGVsLJuGd/PKlyhmcBxZnHhHqyhYppzyrdb2q/sy+S6dQYkeGM8A+HmIIHVhbi7r8Sjasa/HRBkOmTSYQOZzhQ==",
+      "path": "xamarin.forms.pancakeview/2.3.0.759",
+      "hashPath": "xamarin.forms.pancakeview.2.3.0.759.nupkg.sha512"
     }
   }
 }

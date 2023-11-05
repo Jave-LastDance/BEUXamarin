@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "v7yLpGE0ZKBOF5Xl59W/wmkb0spy9X20k16mOHimh2FW3+BLSWAHCrdSfLDm6KTM51EQXpfZH1sWxWPcmZUoBA==",
+  "dgSpecHash": "gELQozEjgLrsF48q0TAP7L9uPlmxhECsCEc2xZBiy11O6uEejxawWnXttMSDf7M3yNGrhmLZQNB0cswpuQR6uw==",
   "success": true,
   "projectFilePath": "C:\\Users\\marir\\Desktop\\BeuXamarin\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp.iOS\\BeuMobileApp.iOS.csproj",
   "expectedPackageFiles": [
@@ -16,6 +16,7 @@
     "C:\\Users\\marir\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
     "C:\\Users\\marir\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\marir\\.nuget\\packages\\system.collections.concurrent\\4.3.0\\system.collections.concurrent.4.3.0.nupkg.sha512",
+    "C:\\Users\\marir\\.nuget\\packages\\system.componentmodel\\4.3.0\\system.componentmodel.4.3.0.nupkg.sha512",
     "C:\\Users\\marir\\.nuget\\packages\\system.console\\4.3.0\\system.console.4.3.0.nupkg.sha512",
     "C:\\Users\\marir\\.nuget\\packages\\system.diagnostics.debug\\4.3.0\\system.diagnostics.debug.4.3.0.nupkg.sha512",
     "C:\\Users\\marir\\.nuget\\packages\\system.diagnostics.tools\\4.3.0\\system.diagnostics.tools.4.3.0.nupkg.sha512",
@@ -62,7 +63,8 @@
     "C:\\Users\\marir\\.nuget\\packages\\xamarin.firebase.ios.core\\6.6.6\\xamarin.firebase.ios.core.6.6.6.nupkg.sha512",
     "C:\\Users\\marir\\.nuget\\packages\\xamarin.firebase.ios.installations\\1.1.1\\xamarin.firebase.ios.installations.1.1.1.nupkg.sha512",
     "C:\\Users\\marir\\.nuget\\packages\\xamarin.firebase.ios.instanceid\\4.3.3\\xamarin.firebase.ios.instanceid.4.3.3.nupkg.sha512",
-    "C:\\Users\\marir\\.nuget\\packages\\xamarin.forms\\5.0.0.2612\\xamarin.forms.5.0.0.2612.nupkg.sha512"
+    "C:\\Users\\marir\\.nuget\\packages\\xamarin.forms\\5.0.0.2612\\xamarin.forms.5.0.0.2612.nupkg.sha512",
+    "C:\\Users\\marir\\.nuget\\packages\\xamarin.forms.pancakeview\\2.3.0.759\\xamarin.forms.pancakeview.2.3.0.759.nupkg.sha512"
   ],
   "logs": []
 }

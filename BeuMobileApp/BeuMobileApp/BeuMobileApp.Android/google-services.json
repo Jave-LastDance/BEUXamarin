@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "28562417714",
+    "project_id": "be-u-notification-system",
+    "storage_bucket": "be-u-notification-system.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:28562417714:android:d7f6e6419c15d5e84d742b",
+        "android_client_info": {
+          "package_name": "co.edu.javeriana.beu.mobileapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_oabL31IOEylm_lY45cS3XyFkUdECwMU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
