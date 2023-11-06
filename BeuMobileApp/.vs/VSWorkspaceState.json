@@ -3,9 +3,8 @@
     "",
     "\\BeuMobileApp",
     "\\BeuMobileApp\\BeuMobileApp",
-    "\\BeuMobileApp\\BeuMobileApp\\Util",
     "\\BeuMobileApp\\BeuMobileApp\\Views"
   ],
-  "SelectedNode": "\\BeuMobileApp\\BeuMobileApp\\Views\\ProfileView.xaml",
+  "SelectedNode": "\\BeuMobileApp\\BeuMobileApp\\Views\\DetailsAccount.xaml",
   "PreviewInSolutionExplorer": false
 }
