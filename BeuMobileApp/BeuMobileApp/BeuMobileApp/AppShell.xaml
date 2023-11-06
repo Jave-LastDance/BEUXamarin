@@ -31,8 +31,8 @@
 
     <TabBar>
         <ShellContent Title="Eventos" Icon="icon_feed.png" ContentTemplate="{DataTemplate local:EventView}" />
-        <ShellContent Title="Notificaciones" Icon="icon_about.png" Route="AboutPage" ContentTemplate="{DataTemplate local:NotificationView}" />
-        <ShellContent Title="Perfil" Icon="icon_profile.png" Route="LoginPage" ContentTemplate="{DataTemplate local:ProfileView}" />
+        <ShellContent Title="Notificaciones" Icon="icon_about.png" Route="NotificationView" ContentTemplate="{DataTemplate local:NotificationView}" />
+        <ShellContent Title="Perfil" Icon="icon_profile.png" Route="ProfileView" ContentTemplate="{DataTemplate local:ProfileView}" />
     </TabBar>
 
  

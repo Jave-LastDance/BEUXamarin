@@ -17,7 +17,7 @@ namespace BeuMobileApp.Services
         {
             client = new HttpClient
             {
-                BaseAddress = new Uri("http://192.168.1.100:8081/eventosPUJ/")
+                BaseAddress = new Uri("http://192.168.0.6:8081/eventosPUJ/")
             };
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Add("Accept", "application/json");

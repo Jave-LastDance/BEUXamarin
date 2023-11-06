@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZTen3jTfScqNWOUSWRL10LTW0e+OtpOq39Wym2vQ3bGjuIj1pviDyRUpkYBp7GXhQLaPqumpbYKRPJW7Rt2mug==",
+  "dgSpecHash": "WL+XizUXdN92zBBcTLHJqFoebKuOUawi7y+LQg8KDpbYC3XDVyrWMk0dSLlvme3KagMGf9QHIVtJzBjUCkjgcA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\marir\\Desktop\\BeuXamarin\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp.csproj",
+  "projectFilePath": "C:\\Users\\marir\\Desktop\\BeuXamarin\\BEUXamarin\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marir\\.nuget\\packages\\behaviors.forms\\1.4.0\\behaviors.forms.1.4.0.nupkg.sha512",
     "C:\\Users\\marir\\.nuget\\packages\\fody\\6.6.4\\fody.6.6.4.nupkg.sha512",

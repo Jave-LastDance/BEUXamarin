@@ -7560,11 +7560,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\marir\\Desktop\\BeuXamarin\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp.iOS\\BeuMobileApp.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\marir\\Desktop\\BeuXamarin\\BEUXamarin\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp.iOS\\BeuMobileApp.iOS.csproj",
       "projectName": "BeuMobileApp.iOS",
-      "projectPath": "C:\\Users\\marir\\Desktop\\BeuXamarin\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp.iOS\\BeuMobileApp.iOS.csproj",
+      "projectPath": "C:\\Users\\marir\\Desktop\\BeuXamarin\\BEUXamarin\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp.iOS\\BeuMobileApp.iOS.csproj",
       "packagesPath": "C:\\Users\\marir\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\marir\\Desktop\\BeuXamarin\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp.iOS\\obj\\",
+      "outputPath": "C:\\Users\\marir\\Desktop\\BeuXamarin\\BEUXamarin\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -7579,8 +7579,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\marir\\Desktop\\BeuXamarin\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp.csproj": {
-              "projectPath": "C:\\Users\\marir\\Desktop\\BeuXamarin\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp.csproj"
+            "C:\\Users\\marir\\Desktop\\BeuXamarin\\BEUXamarin\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp.csproj": {
+              "projectPath": "C:\\Users\\marir\\Desktop\\BeuXamarin\\BEUXamarin\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp\\BeuMobileApp.csproj"
             }
           }
         }

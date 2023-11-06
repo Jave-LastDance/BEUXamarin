@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:viewModels="clr-namespace:BeuMobileApp.ViewModels"
+             x:Class="BeuMobileApp.Views.CGCView"
+             Title="CGC"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" xmlns:title="clr-namespace:BeuMobileApp.TitleViews"
+             BackgroundColor="#4495FA"
+             ios:Page.UseSafeArea="true"
+             >
+
+    <ContentPage.BindingContext>
+        <viewModels:CGCViewModel />
+    </ContentPage.BindingContext>
+
+    <StackLayout>
+
+        <Image Source="logobeuh.png" Aspect="AspectFit" WidthRequest="200" HorizontalOptions="Center" VerticalOptions="Start" Grid.Row="0" />
+
+        <Label Text="¡Queremos conocerte!"
+               TextColor="Black"
+               FontSize="24"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand" />
+
+        <Label Text="Déjanos saber cuáles son tus intereses y nosotros nos encargaremos de informarte sobre eventos relacionados."
+               TextColor="Black"
+               FontSize="16"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" 
+               VerticalTextAlignment="Center" Margin="15,0,15,15" />
+
+        <RefreshView Command="{Binding LoadPreferencesCommand}"
+                     IsRefreshing="{Binding IsBusy, Mode=TwoWay}"
+                     Padding="5">
+
+
+
+            <CollectionView ItemsSource="{Binding AvailableServices}" SelectedItems="{Binding SelectedPreferences}" Margin="16" x:Name="collectionView" SelectionMode="Multiple" BackgroundColor="White">
+
+                <CollectionView.Header>
+                    <StackLayout>
+
+                        <Label Margin="0,10,0,0"
+                               Text="Centro Cultural"
+                               HorizontalOptions="Center"
+                               FontSize="24"
+                               TextColor="Black"
+                               FontAttributes="Bold" />
+                    </StackLayout>
+                </CollectionView.Header>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Row="1" Grid.Column="1"  Text="{Binding Topic}" TextColor="Black"/>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup Name="CommonStates">
+                                    <VisualState Name="Normal" />
+                                    <VisualState Name="Selected">
+                                        <VisualState.Setters>
+                                            <Setter Property="BackgroundColor" Value="#FFD24C" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+                <CollectionView.Footer>
+                    <StackLayout>
+                        <Button Text="Siguiente"
+                               CornerRadius="16"
+                               BackgroundColor="#FFD24C"
+                               TextColor="White" 
+                               FontAttributes="Bold"
+                               Margin="30,30,30,30"
+                               Command="{Binding SaveCommand}"
+                        />
+                    </StackLayout>
+                </CollectionView.Footer>
+            </CollectionView>
+
+        </RefreshView>
+    </StackLayout>
+
+</ContentPage>
