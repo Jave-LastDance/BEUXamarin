@@ -1,4 +1,5 @@
 ﻿using BeuMobileApp.ViewModels;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,6 +12,11 @@ namespace BeuMobileApp.Views
         {
             InitializeComponent();
             this.BindingContext = new ProfileViewModel();
+        }
+        private void DetallesCuentaButton_Clicked(object sender, EventArgs e)
+        {
+            // Navega a la página "DetailsAccount"
+            Navigation.PushAsync(new DetailsAccount());
         }
     }
 }

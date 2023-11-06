@@ -1,4 +1,5 @@
 ﻿using BeuMobileApp.InterfaceBeacons;
+using BeuMobileApp.Views;
 using Plugin.FirebasePushNotification;
 using System;
 using Xamarin.Forms;
@@ -23,8 +24,8 @@ namespace BeuMobileApp
                 DependencyService.Get<iOSScan>().InitializeScannerService();
             }
 
-            MainPage = new AppShell();
-
+            // MainPage = new AppShell();
+            MainPage = new LoginView();
 
         }
 
