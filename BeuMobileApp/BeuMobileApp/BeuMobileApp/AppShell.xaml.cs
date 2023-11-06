@@ -22,7 +22,7 @@ namespace BeuMobileApp
             Routing.RegisterRoute(nameof(CAPSView), typeof(CAPSView));
             Routing.RegisterRoute(nameof(CPSFJView), typeof(CPSFJView));
             Routing.RegisterRoute(nameof(CFICCView), typeof(CFICCView));
-            Routing.RegisterRoute(nameof(NotificationView), typeof(NotificationView));
+            Routing.RegisterRoute(nameof(PriorityView), typeof(PriorityView));
 
         }
 

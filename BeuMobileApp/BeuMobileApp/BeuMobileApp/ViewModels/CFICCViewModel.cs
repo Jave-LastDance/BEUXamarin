@@ -99,7 +99,7 @@ namespace BeuMobileApp.ViewModels
             {
                 Console.WriteLine("Ningún elemento seleccionado.");
             }
-            //await Shell.Current.GoToAsync($"{nameof(NotificationView)}");
+            await Shell.Current.GoToAsync($"{nameof(PriorityView)}");
 
             
         }

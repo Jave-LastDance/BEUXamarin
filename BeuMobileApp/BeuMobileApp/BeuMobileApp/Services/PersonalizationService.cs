@@ -59,7 +59,7 @@ namespace BeuMobileApp.Services
             
             try
             {
-                Console.WriteLine("Haciendo solicitud a la API POST...");
+                Console.WriteLine("Haciendo solicitud a la API POST PREF...");
                 string json = JsonConvert.SerializeObject(UserPref);
                 StringContent jsoncontent = new StringContent(json, Encoding.UTF8, "application/json");
                 HttpResponseMessage response = await client.PostAsync("usuario/preferencias", jsoncontent);
@@ -74,16 +74,49 @@ namespace BeuMobileApp.Services
                 }
                 else
                 {
-                    Console.WriteLine("Error al agegar las preferencias: " + response.StatusCode);
+                    Console.WriteLine("Error al agregar las preferencias: " + response.StatusCode);
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error al agegar preferencias: " + ex.Message);
+                Console.WriteLine("Error al agregar preferencias: " + ex.Message);
             }
 
             return result;
         }
 
+
+        public async Task<string> PostUserPriority(List<PriorityUser> UserPrior)
+        {
+
+            string result = null;
+
+            try
+            {
+                Console.WriteLine("Haciendo solicitud a la API POST PRIOR...");
+                string json = JsonConvert.SerializeObject(UserPrior);
+                StringContent jsoncontent = new StringContent(json, Encoding.UTF8, "application/json");
+                HttpResponseMessage response = await client.PostAsync("prioridad/usuario", jsoncontent);
+                if (response.IsSuccessStatusCode)
+                {
+                    Console.WriteLine("Respuesta exitosa de la API.");
+                    string content = await response.Content.ReadAsStringAsync();
+                    Console.WriteLine("Contenido de la respuesta de la API:");
+                    Console.WriteLine(content);
+                    result = content;
+
+                }
+                else
+                {
+                    Console.WriteLine("Error al agregar las prioridades: " + response.StatusCode);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al agregar prioridades: " + ex.Message);
+            }
+
+            return result;
+        }
     }
 }

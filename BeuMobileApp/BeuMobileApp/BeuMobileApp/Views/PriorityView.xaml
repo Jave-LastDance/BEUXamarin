@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BeuMobileApp.Views.PriorityView"
+             Title="Prioridades"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             xmlns:viewModels="clr-namespace:BeuMobileApp.ViewModels"
+             BackgroundColor="#4495FA"
+             ios:Page.UseSafeArea="true">
+
+    <ContentPage.BindingContext>
+        <viewModels:PriorityViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Image Source="logobeuh.png" Aspect="AspectFit" WidthRequest="200" HorizontalOptions="Center" VerticalOptions="Start" Grid.Row="0" />
+
+            <Label Text="¡Queremos conocerte!"
+                 TextColor="Black"
+                 FontSize="24"
+                 HorizontalOptions="Center"
+                 VerticalOptions="CenterAndExpand" Grid.Row="1"
+            />
+
+            <Label Text="Ahora queremos saber qué es más importante para ti a la hora de ser notificado sobre un evento próximo a tu ubicación."
+                  TextColor="Black"
+                  FontSize="16"
+                  HorizontalOptions="Center"
+                  VerticalOptions="Center" Grid.Row="2" 
+                  VerticalTextAlignment="Center" Margin="15,0,15,15"
+            />
+
+            <ScrollView Grid.Row="3" >
+                <StackLayout BackgroundColor="White" Margin="20" WidthRequest="300">
+
+                    <Label Text="Selecciona el número del criterio conforme sea más importante para ti (4) o menos importante (1). NO SE PUEDE REPETIR NINGÚN VALOR."
+                        TextColor="#424949"
+                        FontSize="16"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        Margin="20"
+                    />
+
+                    <StackLayout Orientation="Vertical" Margin="20">
+                        <Label Text="Ubicación" TextColor="Black" FontSize="Body" FontAttributes="Bold" VerticalOptions="Start" HorizontalOptions="Start"   />
+                        <Entry  Text="{Binding Location}" Placeholder="#" Keyboard="Numeric" VerticalOptions="Start" HorizontalOptions="Start"  />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical" Margin="20">
+                        <Label Text="Programa" TextColor="Black" FontSize="Body" FontAttributes="Bold" VerticalOptions="Start"  HorizontalOptions="Start"  />
+                        <Entry Text="{Binding Program}" Placeholder="#" Keyboard="Numeric" VerticalOptions="Start"  HorizontalOptions="Start"  />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical" Margin="20">
+                        <Label Text="Preferencias" TextColor="Black" FontSize="Body" FontAttributes="Bold" VerticalOptions="Start"  HorizontalOptions="Start" />
+                        <Entry Text="{Binding Preference}"  Placeholder="#" Keyboard="Numeric" VerticalOptions="Start"  HorizontalOptions="Start" />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical" Margin="20">
+                        <Label Text="Horario" TextColor="Black" FontSize="Body" FontAttributes="Bold" VerticalOptions="Start"  HorizontalOptions="Start" />
+                        <Entry Text="{Binding Schedule}"  Placeholder="#" Keyboard="Numeric" VerticalOptions="Start"  HorizontalOptions="Start"  />
+                    </StackLayout>
+
+                    <Button Text="Guardar"
+                        CornerRadius="16"
+                        BackgroundColor="#FFD24C"
+                        TextColor="White" 
+                        FontAttributes="Bold"
+                        Margin="20"
+                        Command="{Binding SaveCommand}"
+                    />
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

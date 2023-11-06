@@ -59,6 +59,7 @@ C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobile
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp\obj\Debug\netstandard2.0\Views\EventDetailView.xaml.g.cs
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp\obj\Debug\netstandard2.0\Views\EventView.xaml.g.cs
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp\obj\Debug\netstandard2.0\Views\NotificationView.xaml.g.cs
+C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp\obj\Debug\netstandard2.0\Views\PriorityView.xaml.g.cs
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp\obj\Debug\netstandard2.0\Views\ProfileView.xaml.g.cs
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp\obj\Debug\netstandard2.0\BeuMobileApp.AssemblyInfoInputs.cache
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp\obj\Debug\netstandard2.0\BeuMobileApp.AssemblyInfo.cs
