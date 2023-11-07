@@ -87,7 +87,7 @@ namespace BeuMobileApp.ViewModels
         }
         async void TapCallback()
         {
-            Console.WriteLine("EventId TITLE: " + EventIndex);
+            
             await Shell.Current.GoToAsync($"{nameof(EventDetailView)}" + $"?{nameof(EventDetailViewModel.EventIndex)}={EventIndex}");
         }
     

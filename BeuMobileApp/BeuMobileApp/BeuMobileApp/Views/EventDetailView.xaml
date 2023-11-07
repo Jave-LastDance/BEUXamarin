@@ -127,7 +127,7 @@
                                         <pan:PancakeView CornerRadius="16"
                                                               Padding="16"  BackgroundColor="#F4F4F4">
                                             <StackLayout>
-                                                <Label Text="{Binding Comment}" FontAttributes="Italic"/>
+                                                <Label Text="{Binding comment}" FontAttributes="Italic"/>
                                             </StackLayout>
                                         </pan:PancakeView>
                                     </DataTemplate>
@@ -144,12 +144,13 @@
                                      >
                         <StackLayout Spacing="8">
                             <Label Text="Tu comentario"  FontAttributes="Bold"/>
-                            <Entry x:Name="commentEntry" Placeholder="Escribe tu comentario..." FontSize="Small" />
+                            <Entry Text="{Binding CommentText}" Placeholder="Escribe tu comentario..." FontSize="Small" />
                             <Button Text="Comentar" 
                                     CornerRadius="16" 
                                     TextColor="White" 
                                     FontAttributes="Bold"
-                                    BackgroundColor="#4495FA"/>
+                                    BackgroundColor="#4495FA"
+                                    Command="{Binding AddCommentCommand}"/>
                         </StackLayout>
                     </pan:PancakeView>
 
@@ -168,16 +169,17 @@ BackgroundColor="White">
                                 </Grid.ColumnDefinitions>
 
                                 <StackLayout Orientation="Horizontal" Grid.Column="0" VerticalOptions="Center">
-                                    <Button Text="-" BackgroundColor="Transparent" TextColor="Black"  FontAttributes="Bold" FontSize="Large"/>
-                                    <Label x:Name="valorLabel" Text="0" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" FontSize="Large"/>
-                                    <Button Text="+" BackgroundColor="Transparent" TextColor="Black" FontAttributes="Bold" FontSize="Large"/>
+                                    <Button Text="-" BackgroundColor="Transparent" TextColor="Black"  FontAttributes="Bold" FontSize="Large" Command="{Binding DecreaseRatingCommand}"/>
+                                    <Label Text="{Binding EventRating}"  VerticalOptions="Center" HorizontalOptions="CenterAndExpand" FontSize="Large"/>
+                                    <Button Text="+" BackgroundColor="Transparent" TextColor="Black" FontAttributes="Bold" FontSize="Large" Command="{Binding IncreaseRatingCommand}"/>
                                 </StackLayout>
                                 <Button Text="Calificar" 
                                        CornerRadius="16" 
                                        TextColor="White" 
                                        FontAttributes="Bold"
                                        BackgroundColor="#4495FA"
-                                       Grid.Column="1"/>
+                                       Grid.Column="1"
+                                       Command="{Binding SaveRating}"/>
 
                             </Grid>
                         </StackLayout>

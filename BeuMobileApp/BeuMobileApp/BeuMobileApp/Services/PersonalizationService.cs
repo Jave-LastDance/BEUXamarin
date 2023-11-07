@@ -28,15 +28,14 @@ namespace BeuMobileApp.Services
 
            try
            {
-                 Console.WriteLine("Haciendo solicitud a la API De Personalizacion ..."); 
+                 
 
                  HttpResponseMessage response = await client.GetAsync("preferencias/"+nameCenter);
                  if (response.IsSuccessStatusCode)
                   {
-                     Console.WriteLine("Respuesta exitosa de la API."); 
+                     
                      string content = await response.Content.ReadAsStringAsync();
-                     Console.WriteLine("Contenido de la respuesta de la API:");
-                     Console.WriteLine(content);
+                    
                      result = JsonConvert.DeserializeObject<List<Preference>>(content);
                  }
                  else
@@ -59,16 +58,15 @@ namespace BeuMobileApp.Services
             
             try
             {
-                Console.WriteLine("Haciendo solicitud a la API POST PREF...");
+                
                 string json = JsonConvert.SerializeObject(UserPref);
                 StringContent jsoncontent = new StringContent(json, Encoding.UTF8, "application/json");
                 HttpResponseMessage response = await client.PostAsync("usuario/preferencias", jsoncontent);
                 if (response.IsSuccessStatusCode)
                 {
-                    Console.WriteLine("Respuesta exitosa de la API.");
+                    
                     string content = await response.Content.ReadAsStringAsync();
-                    Console.WriteLine("Contenido de la respuesta de la API:");
-                    Console.WriteLine(content);
+                 
                     result= content;
 
                 }
@@ -93,16 +91,15 @@ namespace BeuMobileApp.Services
 
             try
             {
-                Console.WriteLine("Haciendo solicitud a la API POST PRIOR...");
+               
                 string json = JsonConvert.SerializeObject(UserPrior);
                 StringContent jsoncontent = new StringContent(json, Encoding.UTF8, "application/json");
                 HttpResponseMessage response = await client.PostAsync("prioridad/usuario", jsoncontent);
                 if (response.IsSuccessStatusCode)
                 {
-                    Console.WriteLine("Respuesta exitosa de la API.");
+                    
                     string content = await response.Content.ReadAsStringAsync();
-                    Console.WriteLine("Contenido de la respuesta de la API:");
-                    Console.WriteLine(content);
+                    
                     result = content;
 
                 }

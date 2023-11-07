@@ -27,15 +27,14 @@ namespace BeuMobileApp.Services
 
             try
             {
-                Console.WriteLine("Haciendo solicitud a la API...");
+                
 
                 HttpResponseMessage response = await client.GetAsync("notifications/user/"+ idUser);
                 if (response.IsSuccessStatusCode)
                 {
-                    Console.WriteLine("Respuesta exitosa de la API.");
+                  
                     string content = await response.Content.ReadAsStringAsync();
-                    Console.WriteLine("Contenido de la respuesta de la API:");
-                    Console.WriteLine(content);
+                   
                     result = JsonConvert.DeserializeObject<List<Notification>>(content);
                 }
                 else
@@ -60,10 +59,9 @@ namespace BeuMobileApp.Services
                 HttpResponseMessage response = await client.GetAsync("notification/" + IdNot);
                 if (response.IsSuccessStatusCode)
                 {
-                    Console.WriteLine("Respuesta exitosa de la API.");
+                    
                     string content = await response.Content.ReadAsStringAsync();
-                    Console.WriteLine("Contenido de la respuesta de la API:");
-                    Console.WriteLine(content);
+                    
                     ntf = JsonConvert.DeserializeObject<Notification>(content);
                 }
                 else

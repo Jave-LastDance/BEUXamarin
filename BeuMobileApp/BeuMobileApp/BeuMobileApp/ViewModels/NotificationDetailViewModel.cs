@@ -44,7 +44,7 @@ namespace BeuMobileApp.ViewModels
                 if (notificationId != value)
                 {
                     notificationId = value;
-                    Console.WriteLine("Me llega: " + notificationId);
+                   
                     LoadNotificationData(notificationId);
                 }
             }
@@ -89,7 +89,7 @@ namespace BeuMobileApp.ViewModels
 
         public async Task<Event> GetEvent(int eventId)
         {
-            Console.WriteLine("ID EVENTO: " + eventId);
+     
             var evt = await eventService.GetEvent(eventId);
             return evt;
         }

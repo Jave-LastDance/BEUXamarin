@@ -3,8 +3,7 @@ using BeuMobileApp.Services;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
+using System.Threading.Tasks;
 
 using Xamarin.Forms;
 
@@ -42,13 +41,6 @@ namespace BeuMobileApp.ViewModels
         public string CenterImage { get; set; }
 
 
-
-        public Command ImageChangedCommand { get; }
-        public Command PhotoCommand { get; }
-
-        public Command EventUrl { get; }
-
- 
         public int EventIndex
         {
             get => EventId;
@@ -56,28 +48,63 @@ namespace BeuMobileApp.ViewModels
             {
                 if (EventId != value)
                 {
-                    EventId = value;                   
+                    EventId = value;
                     LoadEventData(EventId);
                 }
             }
         }
 
 
+        private int eventRating;
+        public int EventRating
+        {
+            get => eventRating;
+            set
+            {
+                if (value >= 0 && value <= 5)
+                {
+                    eventRating = value;
+                    OnPropertyChanged(nameof(EventRating));
+                }
+            }
+        }
+
+        public int idUser { get; }
+
+        public string CommentText { get; set; }
+
+        public Command AddCommentCommand { get; set; }
+
+        public Command IncreaseRatingCommand { get; }
+        public Command DecreaseRatingCommand { get; }
+        public Command ImageChangedCommand { get; }
+        public Command PhotoCommand { get; }
+
+        public Command EventUrl { get; }
+
+        public Command SaveRating { get; }
 
         public EventDetailViewModel()
         {
 
             eventService = new EventService();
             Events = new ObservableCollection<EventTitleViewModel>();
-
+            EventRating = 0;
+            idUser = 7;
+            Reviews = new List<Review>();
+            IncreaseRatingCommand = new Command(IncreaseRating, CanIncreaseRating);
+            DecreaseRatingCommand = new Command(DecreaseRating, CanDecreaseRating);
+            AddCommentCommand = new Command(async () => await AddComment());
+            SaveRating = new Command(async () => await RateEvent(idUser));
         }
 
         async void LoadEventData(int EventIndex)
         {
-            Console.WriteLine("Este es el indice en DeatilEvents: " + EventIndex);
+
             var selectedEvent = await eventService.GetEvent(EventIndex);
             if (selectedEvent != null)
             {
+
                 Name = selectedEvent.Name;
                 Description = selectedEvent.Description;
                 Requirements = selectedEvent.Requirements;
@@ -110,8 +137,130 @@ namespace BeuMobileApp.ViewModels
 
         }
 
-       
+        private bool CanIncreaseRating()
+        {
+            return EventRating <= 5;
+        }
+
+        private void IncreaseRating()
+        {
+            if (EventRating <= 5)
+            {
+                EventRating++;
+                ((Command)DecreaseRatingCommand).ChangeCanExecute();
+                ((Command)IncreaseRatingCommand).ChangeCanExecute();
+            }
+        }
+
+        private bool CanDecreaseRating()
+        {
+            return EventRating >= 0;
+        }
+
+        private void DecreaseRating()
+        {
+            if (EventRating >= 0)
+            {
+                EventRating--;
+                ((Command)DecreaseRatingCommand).ChangeCanExecute();
+                ((Command)IncreaseRatingCommand).ChangeCanExecute();
+            }
+        }
+
+        public async Task RateEvent(int userId)
+        {
+            Rating existingRating = await eventService.GetRating(userId, EventId);
+
+            if (existingRating != null)
+            {
+                existingRating.grade = EventRating;
+
+                var updateResult = await eventService.PutRating(existingRating);
+                if (updateResult != null)
+                {
+                    await Application.Current.MainPage.DisplayAlert("Éxito", "Operación exitosa", "OK");
+                }
+                else
+                {
+                    await Application.Current.MainPage.DisplayAlert("Error", "Operación fallida", "OK");
+                }
 
 
+
+            }
+            else
+            {
+
+                Rating newRating = new Rating
+                {
+                    eventid_event = EventId,
+                    idUser = userId,
+                    grade = EventRating
+                };
+
+                var addResult = await eventService.PostRating(newRating);
+                if (addResult != null)
+                {
+                    await Application.Current.MainPage.DisplayAlert("Éxito", "Operación exitosa", "OK");
+                }
+                else
+                {
+                    await Application.Current.MainPage.DisplayAlert("Error", "Operación fallida", "OK");
+                }
+
+
+            }
+
+
+
+        }
+
+        private async Task AddComment()
+        {
+            Review reviewUser = null;
+            foreach (var review in Reviews)
+            {
+                if (review.idUser == idUser) {
+                    reviewUser = review;
+                    break;
+                }
+            }
+
+            if (reviewUser != null)
+            {
+                reviewUser.comment = CommentText;
+                var updateReview = await eventService.PutReview(reviewUser);
+                if (updateReview != null)
+                {
+                    await Application.Current.MainPage.DisplayAlert("Éxito", "Operación exitosa", "OK");
+
+                }
+                else
+                {
+                    await Application.Current.MainPage.DisplayAlert("Error", "Operación fallida", "OK");
+                }
+            }
+            else {
+             
+                Review reviewNewUser = new Review
+                {
+                    comment = CommentText,
+                    idUser = idUser,
+                    eventId = EventId
+                };
+              
+                var createReview = await eventService.PostReview(reviewNewUser);
+                if (createReview != null)
+                {
+                    await Application.Current.MainPage.DisplayAlert("Éxito", "Operación exitosa", "OK");
+
+                }
+                else
+                {
+                    await Application.Current.MainPage.DisplayAlert("Error", "Operación fallida", "OK");
+                }
+            }
+
+        }
     }
 }
