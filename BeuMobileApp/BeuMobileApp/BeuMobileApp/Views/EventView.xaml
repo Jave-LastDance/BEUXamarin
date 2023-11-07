@@ -10,6 +10,8 @@
              ios:Page.UseSafeArea="true"
              
              >
+
+
     <ContentPage.BindingContext>
         <viewmodels:EventViewModel/>
     </ContentPage.BindingContext>
@@ -22,24 +24,37 @@
                         Margin="16">
 
             <CollectionView.ItemsLayout>
-
                 <LinearItemsLayout Orientation="Vertical"
                                    ItemSpacing="15"/>
-
             </CollectionView.ItemsLayout>
 
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Frame Margin="5"
-                               Padding="5"
-                               CornerRadius="10"
-                               HasShadow="True">
+                           Padding="5"
+                           CornerRadius="10"
+                           HasShadow="True">
                         <title:EventTitleView/>
                     </Frame>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
 
         </CollectionView>
+
+        <!-- Botón con la imagen "chatbot.png" dentro de un Frame en la esquina inferior izquierda -->
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <ImageButton  Source="https://icones.pro/wp-content/uploads/2022/10/robot-icon.png"
+                   WidthRequest="80" HeightRequest="80"
+                   HorizontalOptions="Start" VerticalOptions="End"
+                   Grid.Row="1" 
+                   BackgroundColor="Transparent"
+                   Padding="0" BorderColor="Transparent"
+                   Clicked="OpenWhatsAppChat"/>
+        </Grid>
 
     </RefreshView>
 </ContentPage>
