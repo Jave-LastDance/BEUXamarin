@@ -39,7 +39,7 @@ namespace BeuMobileApp.ViewModels
 
         async void TapCallback()
         {
-            Console.WriteLine("Notif tITLE: " + Notification_id);
+         
             await Shell.Current.GoToAsync($"{nameof(NotificationDetailView)}" + $"?{nameof(NotificationDetailViewModel.NotificationId)}={Notification_id}");
 
         }

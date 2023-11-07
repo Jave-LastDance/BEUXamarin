@@ -39,7 +39,7 @@ namespace BeuMobileApp.ViewModels
 
             AvailableServices.Clear();
 
-            Console.Write("Estoy entrando al emtodo");
+           
             try
             {
                 var pref = await personalizationService.GetPreference("CFICC");

@@ -6,9 +6,9 @@ namespace BeuMobileApp.Models
 {
     public class Rating
     {
-        public int IdRatingXEvent { get; set; }
-        public int Grade { get; set; }
-        public int Eventid_event { get; set; }
-        public int IdUser { get; set; }
+        public int idRatingXEvent { get; set; }
+        public int grade { get; set; }
+        public int eventid_event { get; set; }
+        public int idUser { get; set; }
     }
 }

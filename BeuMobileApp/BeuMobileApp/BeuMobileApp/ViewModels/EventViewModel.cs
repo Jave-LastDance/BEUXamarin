@@ -50,8 +50,7 @@ namespace BeuMobileApp.ViewModels
                   
                     foreach (var evnt in events)
                     {
-                        System.Diagnostics.Debug.WriteLine($"Name: {evnt.Name}"); 
-                        System.Diagnostics.Debug.WriteLine($"Description: {evnt.Description}");
+                       
                         var eventTitleViewModel = new EventTitleViewModel(evnt);
                         Events.Add(eventTitleViewModel);
                        
