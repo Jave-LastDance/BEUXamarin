@@ -5,7 +5,8 @@
              xmlns:viewmodels="clr-namespace:BeuMobileApp.ViewModels"  
              Title="Eventos"
              BackgroundColor="#F4F4F4"
-             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" xmlns:title="clr-namespace:BeuMobileApp.TitleViews"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             xmlns:title="clr-namespace:BeuMobileApp.TitleViews"
              ios:Page.UseSafeArea="true"
              
              >

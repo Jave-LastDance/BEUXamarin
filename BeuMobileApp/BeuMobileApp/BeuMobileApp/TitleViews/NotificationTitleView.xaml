@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BeuMobileApp.TitleViews.NotificationTitleView"
+             BackgroundColor="#F4F4F4"
+             xmlns:pan="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" 
+             xmlns:viewmodels="clr-namespace:BeuMobileApp.ViewModels" 
+             x:DataType="viewmodels:NotificationTitleViewModel">
+
+    <RelativeLayout>
+        <pan:PancakeView  CornerRadius="16" 
+                      RelativeLayout.WidthConstraint="{ConstraintExpression 
+                      Type=RelativeToParent, Property=Width, Factor=1.0}">
+            <StackLayout Spacing="0">
+                <Image Source="{Binding Image}"
+               HeightRequest="160"
+               Aspect="AspectFill"/>
+                <StackLayout Padding="16"
+                     Spacing="4"  BackgroundColor="#CC4495FA">
+                    <StackLayout Orientation="Vertical"
+                         Spacing="16">
+                        <Label Text="{Binding Title}"
+                       MaxLines="1"
+                       FontAttributes="Bold"
+                      />
+
+                        <Label Text="{Binding TimeStamp}"
+                       FontSize="Small"
+                       MaxLines="1"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </pan:PancakeView>
+        <RelativeLayout.GestureRecognizers>
+            <TapGestureRecognizer NumberOfTapsRequired="1"
+                              Command="{Binding TapCommand}"/>
+        </RelativeLayout.GestureRecognizers>
+    </RelativeLayout>
+</ContentView>

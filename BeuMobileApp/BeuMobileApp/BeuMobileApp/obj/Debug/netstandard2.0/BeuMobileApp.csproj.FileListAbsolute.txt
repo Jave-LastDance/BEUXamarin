@@ -51,6 +51,7 @@ C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobile
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp\obj\Debug\netstandard2.0\TitleViews\EventTitleView.xaml.g.cs
+C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp\obj\Debug\netstandard2.0\TitleViews\NotificationTitleView.xaml.g.cs
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp\obj\Debug\netstandard2.0\Views\CAPSView.xaml.g.cs
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp\obj\Debug\netstandard2.0\Views\CFICCView.xaml.g.cs
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp\obj\Debug\netstandard2.0\Views\CGCView.xaml.g.cs
@@ -58,6 +59,7 @@ C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobile
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp\obj\Debug\netstandard2.0\Views\CPSFJView.xaml.g.cs
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp\obj\Debug\netstandard2.0\Views\EventDetailView.xaml.g.cs
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp\obj\Debug\netstandard2.0\Views\EventView.xaml.g.cs
+C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp\obj\Debug\netstandard2.0\Views\NotificationDetailView.xaml.g.cs
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp\obj\Debug\netstandard2.0\Views\NotificationView.xaml.g.cs
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp\obj\Debug\netstandard2.0\Views\PriorityView.xaml.g.cs
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp\obj\Debug\netstandard2.0\Views\ProfileView.xaml.g.cs

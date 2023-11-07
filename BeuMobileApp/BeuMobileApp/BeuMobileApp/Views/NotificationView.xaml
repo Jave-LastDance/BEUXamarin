@@ -2,15 +2,39 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BeuMobileApp.Views.NotificationView"
-             xmlns:vm="clr-namespace:BeuMobileApp.ViewModels"
              Title="Notificaciones"
+             xmlns:viewmodels="clr-namespace:BeuMobileApp.ViewModels"  
+             BackgroundColor="#F4F4F4"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             xmlns:title="clr-namespace:BeuMobileApp.TitleViews" 
+             ios:Page.UseSafeArea="true"
              >
+    <ContentPage.BindingContext>
+        <viewmodels:NotificationViewModel/>
+    </ContentPage.BindingContext>
 
-    <ContentPage.Content>
-        <StackLayout VerticalOptions="Center">
-            <Button VerticalOptions="Center" Text="Notificaciones" Command="{Binding NotificationCommand}"/>
-            <Button VerticalOptions="Center" Text="CJFD" Command="{Binding CJFDCommand}"/>
-        </StackLayout>
-    </ContentPage.Content>
-
+    <RefreshView Command="{Binding LoadNotificationsCommand}"
+                 IsRefreshing="{Binding IsBusy, Mode=TwoWay}"
+                 Padding="5">
+        <CollectionView ItemsSource="{Binding Notifications}"
+                        Margin="16"
+                        >
+            <CollectionView.Header>
+                <StackLayout VerticalOptions="Center" Margin="20">
+                    <Button VerticalOptions="Center" Text="Notificaciones" Command="{Binding NotificationCommand}"/>
+                    <Button VerticalOptions="Center" Text="CJFD" Command="{Binding CJFDCommand}"/>
+                </StackLayout>
+            </CollectionView.Header>
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical"
+                                   ItemSpacing="15"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <title:NotificationTitleView />
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+     
+        </CollectionView>
+    </RefreshView>
 </ContentPage>
