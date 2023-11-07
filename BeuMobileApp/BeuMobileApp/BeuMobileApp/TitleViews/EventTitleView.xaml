@@ -3,7 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BeuMobileApp.TitleViews.EventTitleView"
              BackgroundColor="#F4F4F4"
-             xmlns:pan="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" xmlns:titleviews="clr-namespace:BeuMobileApp.TitleViews" xmlns:viewmodels="clr-namespace:BeuMobileApp.ViewModels" x:DataType="viewmodels:EventTitleViewModel">
+             xmlns:pan="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" 
+             xmlns:titleviews="clr-namespace:BeuMobileApp.TitleViews" 
+             xmlns:viewmodels="clr-namespace:BeuMobileApp.ViewModels" 
+             x:DataType="viewmodels:EventTitleViewModel">
 
     <RelativeLayout>
         <pan:PancakeView  CornerRadius="16" 
