@@ -187,12 +187,18 @@
     <BundleResource Include="Resources\icon_link.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\icon_save.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\logobeuh.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\logobeuv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\icon_saved.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\icon_tosave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\icon_fav.png" />
   </ItemGroup>
 </Project>

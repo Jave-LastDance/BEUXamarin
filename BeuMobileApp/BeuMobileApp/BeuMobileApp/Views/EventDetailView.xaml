@@ -16,10 +16,24 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Spacing="0">
-                <Image Source="{Binding UrlPhotos}"
+                <Grid>
+                    <Image Source="{Binding UrlPhotos}"
                         HeightRequest="160"
                         Aspect="AspectFill"/>
-
+                    <ImageButton Source="icon_fav.png"
+                             WidthRequest="50"
+                             HeightRequest="50"
+                             CornerRadius="25"
+                             HorizontalOptions="End"
+                             VerticalOptions="End"
+                             Margin="0,0,10,10"
+                             BackgroundColor="#FFD24C"
+                             Padding="0"
+                             BorderColor="Transparent"
+                             Grid.Row="0"
+                             Grid.Column="0" />
+   
+                </Grid>
                 <StackLayout Padding="16" Spacing="8">
                     <Label Text="{Binding Name}" FontSize="Small" FontAttributes="Bold"/>
                     <StackLayout Orientation="Horizontal" Spacing="2">

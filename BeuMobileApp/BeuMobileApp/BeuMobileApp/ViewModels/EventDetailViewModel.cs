@@ -69,6 +69,9 @@ namespace BeuMobileApp.ViewModels
             }
         }
 
+
+
+
         public int idUser { get; }
 
         public string CommentText { get; set; }
