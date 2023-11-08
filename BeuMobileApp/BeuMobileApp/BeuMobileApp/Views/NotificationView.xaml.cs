@@ -13,7 +13,7 @@ namespace BeuMobileApp.Views
         public NotificationView()
         {
             InitializeComponent();
-           viewModel=new NotificationViewModel();
+            viewModel=new NotificationViewModel();
             BindingContext = viewModel;
         }
         protected override void OnAppearing()

@@ -3,7 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BeuMobileApp.Views.ProfileView"
              Title="Perfil"
+             xmlns:viewmodels="clr-namespace:BeuMobileApp.ViewModels" 
             >
+     <ContentPage.BindingContext>
+     <viewmodels:NotificationViewModel/>
+ </ContentPage.BindingContext>
+    
     <ContentPage.Content>
         <StackLayout>
             <!-- Fondo con degradado -->
@@ -49,7 +54,8 @@
                     BackgroundColor="#21BDA1" 
                     TextColor="White" 
                     Margin="20, 10, 20, 10"
-                    CornerRadius="20" />
+                    CornerRadius="20"
+                    Command="{Binding CJFDCommand}"/>
 
                     <Button Text="Eventos Guardados" 
                     BackgroundColor="#29B7CB" 
@@ -61,7 +67,8 @@
                     BackgroundColor="#EBA946" 
                     TextColor="White" 
                     Margin="20, 10, 20, 10"
-                    CornerRadius="20" />
+                    CornerRadius="20" 
+                    Clicked="CerrarSesionButton_Clicked"/>
                 </StackLayout>
             </Grid>
         </StackLayout>
