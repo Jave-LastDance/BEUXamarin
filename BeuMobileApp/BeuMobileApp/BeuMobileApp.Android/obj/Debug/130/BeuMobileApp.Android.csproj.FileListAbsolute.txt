@@ -1733,7 +1733,6 @@ C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobile
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\res\drawable\cpsfjlogo.png
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\res\drawable\cficclogo.png
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\res\drawable\icon_link.png
-C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\res\drawable\icon_save.png
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\res\drawable\logobeuh.png
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\res\drawable\logobeuv.png
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\uploadflags.txt
@@ -2459,3 +2458,6 @@ C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobile
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\stamp\_GenerateJavaStubs.stamp
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\res\drawable\icon_saved.png
+C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\res\drawable\icon_tosave.png
+C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\res\drawable\icon_fav.png
