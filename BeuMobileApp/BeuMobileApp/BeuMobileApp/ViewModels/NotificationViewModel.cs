@@ -22,15 +22,14 @@ namespace BeuMobileApp.ViewModels
 
         private readonly NotificationService notificationService;
 
-        private int idUser;
-        
+        public int IdUser { get; set; }
         public NotificationViewModel()
         {
             NotificationCommand = new Command(OnAboutClicked);
             CJFDCommand = new Command(OnCJFD);
             Notifications = new ObservableCollection<NotificationTitleViewModel>();
             notificationService = new NotificationService();
-            idUser = 7;
+            IdUser = UserSession.IdUsuario;
             LoadNotificationsCommand = new Command(async () => await LoadNotifications());
            
         }
@@ -50,7 +49,7 @@ namespace BeuMobileApp.ViewModels
             try
             {
                 
-                var notifications = await notificationService.GetNotifications(idUser);
+                var notifications = await notificationService.GetNotifications(IdUser);
                 if (notifications != null)
                 {
                     foreach (var ntf in notifications)

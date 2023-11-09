@@ -22,7 +22,7 @@ namespace BeuMobileApp.Services
             client.DefaultRequestHeaders.Add("Accept", "application/json");
         }
 
-        public async Task<BeaconBEU> GetBeacon(int Id)
+        public async Task<BeaconBEU> GetBeacon(string Id)
         {
             BeaconBEU evn = null;
             try

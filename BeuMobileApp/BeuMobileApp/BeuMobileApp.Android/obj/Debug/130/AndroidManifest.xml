@@ -20,6 +20,7 @@
         <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
       </intent-filter>
     </receiver>
+    <service android:name=".services.BeaconDetectionService" android:exported="false" android:enabled="true"></service>
     <!-- Aquí se pueden agregar otros componentes de la aplicación, como activities, services, etc. -->
     <uses-library android:name="org.apache.http.legacy" android:required="false" />
     <activity android:configChanges="orientation|smallestScreenSize|screenLayout|screenSize|uiMode" android:icon="@mipmap/icon" android:label="BeuMobileApp" android:theme="@style/MainTheme" android:name="crc6405fc9578de4bed43.MainActivity" android:exported="true">

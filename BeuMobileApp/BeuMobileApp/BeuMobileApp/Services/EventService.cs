@@ -225,6 +225,35 @@ namespace BeuMobileApp.Services
             return result;
 
         }
+
+
+        public async Task<List<Activity>> GetActivities(int idEvnt)
+        {
+            List<Activity> result = new List<Activity>();
+
+            try
+            {
+
+                HttpResponseMessage response = await client.GetAsync("actividadesPUJ/actividades/evento/"+idEvnt);
+                if (response.IsSuccessStatusCode)
+                {
+
+                    string content = await response.Content.ReadAsStringAsync();
+                    result = JsonConvert.DeserializeObject<List<Activity>>(content);
+                }
+                else
+                {
+                    Console.WriteLine("Error al obtener actividades: " + response.StatusCode);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al obtener actividades: " + ex.Message);
+            }
+
+            return result;
+        }
+
     }
 
 }

@@ -38,6 +38,7 @@
         <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
       </intent-filter>
     </receiver>
+    <service android:name="co.edu.javeriana.beu.mobileapp.services.BeaconDetectionService" android:enabled="true" android:exported="false" />
     <!-- Aquí se pueden agregar otros componentes de la aplicación, como activities, services, etc. -->
     <uses-library android:name="org.apache.http.legacy" android:required="false" />
     <activity android:name="crc6405fc9578de4bed43.MainActivity" android:configChanges="orientation|smallestScreenSize|screenLayout|screenSize|uiMode" android:exported="true" android:icon="@mipmap/icon" android:label="BeuMobileApp" android:theme="@style/MainTheme">

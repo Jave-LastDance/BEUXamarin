@@ -1,7 +1,12 @@
 ﻿using BeuMobileApp.InterfaceBeacons;
+using BeuMobileApp.Models;
+using BeuMobileApp.Services;
+using BeuMobileApp.ViewModels;
 using BeuMobileApp.Views;
 using Plugin.FirebasePushNotification;
 using System;
+using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -9,7 +14,7 @@ namespace BeuMobileApp
 {
     public partial class App : Application
     {
-
+        private BeaconLocationViewModel beaconViewModel;
         public App()
         {
             InitializeComponent();
@@ -24,9 +29,10 @@ namespace BeuMobileApp
                 DependencyService.Get<iOSScan>().InitializeScannerService();
             }
 
+           
             // MainPage = new AppShell();
             MainPage = new LoginView();
-
+          
         }
 
         protected override void OnStart()
@@ -35,14 +41,23 @@ namespace BeuMobileApp
             CrossFirebasePushNotification.Current.OnTokenRefresh += (s, p) =>
             {
                 System.Diagnostics.Debug.WriteLine($"TOKEN REC: {p.Token}");
+
+               
             };
             System.Diagnostics.Debug.WriteLine($"TOKEN: {CrossFirebasePushNotification.Current.Token}");
+          
+
+            FirebaseToken.TokenUser = CrossFirebasePushNotification.Current.Token;
+
+
+            
 
 
         }
 
         protected override void OnSleep()
         {
+           
         }
 
         protected override void OnResume()

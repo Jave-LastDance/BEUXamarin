@@ -14,6 +14,7 @@ namespace BeuMobileApp.ViewModels
 {
     public class PriorityViewModel:INotifyPropertyChanged
     {
+        public int IdUser { get; set; }
         public ICommand SaveCommand { get; set; }
 
         private readonly PersonalizationService personalizationService;
@@ -77,6 +78,7 @@ namespace BeuMobileApp.ViewModels
 
 
         public PriorityViewModel() {
+            IdUser = UserSession.IdUsuario;
             personalizationService = new PersonalizationService();
             SaveCommand = new Command(() => SavePreferences());
         }
@@ -94,8 +96,7 @@ namespace BeuMobileApp.ViewModels
            
                     string message = $"Ubicación: {Location}\nPrograma: {Program}\nPreferencias: {Preference}\nHorario: {Schedule}";
                     
-                    int IdUser = 7;
-
+               
                     var priorityUsers = new List<PriorityUser>
                 {
                     new PriorityUser { id_user = IdUser, importance = Convert.ToInt32(Location), priorityrule = "Ubicacion" },

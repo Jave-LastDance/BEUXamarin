@@ -1,10 +1,12 @@
 ﻿using BeuMobileApp.Models;
 using BeuMobileApp.Services;
+using BeuMobileApp.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
-
+using System.Windows.Input;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace BeuMobileApp.ViewModels
@@ -38,6 +40,8 @@ namespace BeuMobileApp.ViewModels
         public string CenterName { get; set; }
         public System.Collections.Generic.List<Review> Reviews { get; set; }
 
+        public System.Collections.Generic.List<Activity> Activities { get; set; }
+
         public string CenterImage { get; set; }
 
 
@@ -69,7 +73,7 @@ namespace BeuMobileApp.ViewModels
             }
         }
 
-
+        public bool ShowActivitiesButton { get; set; }
 
 
         public int idUser { get; }
@@ -85,21 +89,26 @@ namespace BeuMobileApp.ViewModels
 
         public Command EventUrl { get; }
 
+        public Command GoActivities { get; }
+
+        public Command OpenLinkCommand { get; }
         public Command SaveRating { get; }
 
         public EventDetailViewModel()
         {
-
+            ShowActivitiesButton = false;
             eventService = new EventService();
             Events = new ObservableCollection<EventTitleViewModel>();
             EventRating = 0;
-            idUser = 7;
+            idUser = UserSession.IdUsuario ;
+            GoActivities = new Command(GoActivitiesList);
             Reviews = new List<Review>();
             IncreaseRatingCommand = new Command(IncreaseRating, CanIncreaseRating);
             DecreaseRatingCommand = new Command(DecreaseRating, CanDecreaseRating);
             AddCommentCommand = new Command(async () => await AddComment());
             SaveRating = new Command(async () => await RateEvent(idUser));
-        }
+            OpenLinkCommand = new Command(OpenLink);
+    }
 
         async void LoadEventData(int EventIndex)
         {
@@ -125,6 +134,10 @@ namespace BeuMobileApp.ViewModels
                 UrlPhotos = selectedEvent.Url_photos;
                 CenterImage = CenterName + "Logo.png";
                 Reviews = selectedEvent.Reviews;
+                Activities = selectedEvent.Activities;
+                if(Activities.Count>0){
+                    ShowActivitiesButton = true;
+                }
             }
 
         }
@@ -220,50 +233,67 @@ namespace BeuMobileApp.ViewModels
 
         private async Task AddComment()
         {
-            Review reviewUser = null;
-            foreach (var review in Reviews)
+            if (CommentText != null)
             {
-                if (review.idUser == idUser) {
-                    reviewUser = review;
-                    break;
-                }
-            }
-
-            if (reviewUser != null)
-            {
-                reviewUser.comment = CommentText;
-                var updateReview = await eventService.PutReview(reviewUser);
-                if (updateReview != null)
+                Review reviewUser = null;
+                foreach (var review in Reviews)
                 {
-                    await Application.Current.MainPage.DisplayAlert("Éxito", "Operación exitosa", "OK");
+                    if (review.idUser == idUser)
+                    {
+                        reviewUser = review;
+                        break;
+                    }
+                }
 
+                if (reviewUser != null)
+                {
+                    reviewUser.comment = CommentText;
+                    var updateReview = await eventService.PutReview(reviewUser);
+                    if (updateReview != null)
+                    {
+                        await Application.Current.MainPage.DisplayAlert("Éxito", "Operación exitosa", "OK");
+
+                    }
+                    else
+                    {
+                        await Application.Current.MainPage.DisplayAlert("Error", "Operación fallida", "OK");
+                    }
                 }
                 else
                 {
-                    await Application.Current.MainPage.DisplayAlert("Error", "Operación fallida", "OK");
+
+                    Review reviewNewUser = new Review
+                    {
+                        comment = CommentText,
+                        idUser = idUser,
+                        eventId = EventId
+                    };
+
+                    var createReview = await eventService.PostReview(reviewNewUser);
+                    if (createReview != null)
+                    {
+                        await Application.Current.MainPage.DisplayAlert("Éxito", "Operación exitosa", "OK");
+
+                    }
+                    else
+                    {
+                        await Application.Current.MainPage.DisplayAlert("Error", "Operación fallida", "OK");
+                    }
                 }
             }
             else {
-             
-                Review reviewNewUser = new Review
-                {
-                    comment = CommentText,
-                    idUser = idUser,
-                    eventId = EventId
-                };
-              
-                var createReview = await eventService.PostReview(reviewNewUser);
-                if (createReview != null)
-                {
-                    await Application.Current.MainPage.DisplayAlert("Éxito", "Operación exitosa", "OK");
-
-                }
-                else
-                {
-                    await Application.Current.MainPage.DisplayAlert("Error", "Operación fallida", "OK");
-                }
+                await Application.Current.MainPage.DisplayAlert("Error", "No has ingresado un comentario para guardar", "OK");
             }
+        }
 
+        private void OpenLink()
+        {
+            Launcher.OpenAsync(UrlEvent);
+        }
+        async void GoActivitiesList()
+        {
+
+            await Shell.Current.GoToAsync($"{nameof(ActivityView)}" + $"?{nameof(ActivityViewModel.EventIndex)}={EventId}");
         }
     }
 }

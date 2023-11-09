@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Xamarin.Essentials;
-
+using BeuMobileApp.Models;
+using BeuMobileApp.Services;
 
 namespace BeuMobileApp.Views
 {
@@ -16,16 +17,23 @@ namespace BeuMobileApp.Views
         public LoginView()
         {
             InitializeComponent();
+         
         }
         private async void OnLoginButtonClicked(object sender, EventArgs e)
         {
             // Aquí puedes realizar la lógica de autenticación y determinar si el usuario puede iniciar sesión.
            
                 // Si la autenticación es exitosa, puedes navegar a la página MainPage.
+                //Se guarda el id del usuario registrado 
                 App.Current.MainPage = new AppShell();
-            
-              // Si la autenticación falla, puedes mostrar un mensaje de error o realizar otras acciones.
-            
+                UserSession.IdUsuario = 18;
+
+               
+
+
+
+            // Si la autenticación falla, puedes mostrar un mensaje de error o realizar otras acciones.
+
         }
         private async void OnForgotPasswordTapped(object sender, EventArgs e)
         {

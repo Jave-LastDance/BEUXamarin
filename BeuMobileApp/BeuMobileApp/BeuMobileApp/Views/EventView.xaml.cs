@@ -1,5 +1,8 @@
-﻿using BeuMobileApp.ViewModels;
+﻿using BeuMobileApp.Models;
+using BeuMobileApp.Services;
+using BeuMobileApp.ViewModels;
 using System;
+using System.Collections.Generic;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -10,6 +13,7 @@ namespace BeuMobileApp.Views
     public partial class EventView : ContentPage
     {
 
+     
         EventViewModel viewModel;
 
         public EventView()
@@ -17,6 +21,8 @@ namespace BeuMobileApp.Views
             InitializeComponent();
             viewModel = new EventViewModel();
             BindingContext = viewModel;
+        
+        
         }
 
         protected override void OnAppearing()

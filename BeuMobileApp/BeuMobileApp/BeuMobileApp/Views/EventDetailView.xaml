@@ -15,12 +15,13 @@
 
     <ContentPage.Content>
         <ScrollView>
+            <RefreshView>
             <StackLayout Spacing="0">
                 <Grid>
                     <Image Source="{Binding UrlPhotos}"
                         HeightRequest="160"
                         Aspect="AspectFill"/>
-                    <ImageButton Source="icon_fav.png"
+                    <ImageButton Source="icon_link.png"
                              WidthRequest="50"
                              HeightRequest="50"
                              CornerRadius="25"
@@ -31,18 +32,25 @@
                              Padding="0"
                              BorderColor="Transparent"
                              Grid.Row="0"
-                             Grid.Column="0" />
+                             Grid.Column="0" 
+                             Command="{Binding OpenLinkCommand}"             
+                     />
    
                 </Grid>
                 <StackLayout Padding="16" Spacing="8">
                     <Label Text="{Binding Name}" FontSize="Small" FontAttributes="Bold"/>
                     <StackLayout Orientation="Horizontal" Spacing="2">
-                        <Label Text="{Binding PromRating, StringFormat='{0:F1}'}"
-                               TextColor="#4495FA"
-                               FontAttributes="Bold"
-                               VerticalTextAlignment="Center"
-                               HorizontalOptions="FillAndExpand"
-                     />
+
+                            <Label  TextColor="#4495FA" FontAttributes="Bold" VerticalTextAlignment="Center"
+HorizontalOptions="FillAndExpand">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Edificio: " />
+                                        <Span Text="{Binding Location}"   />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                           
                         <Label Text="{Binding Mode}"
                            TextColor="#4495FA"
                            FontAttributes="Bold"
@@ -50,7 +58,7 @@
                      />
                     </StackLayout>
 
-                    <Label>
+                    <Label >
                         <Label.Text>
                             <MultiBinding StringFormat="{} {0} | {1}">
                                 <Binding Path="DateStart"/>
@@ -59,7 +67,7 @@
                         </Label.Text>
                     </Label>
 
-                    <Label>
+                    <Label >
                         <Label.Text>
                             <MultiBinding StringFormat="{} {0} | {1}">
                                 <Binding Path="DateEnd"/>
@@ -67,12 +75,18 @@
                             </MultiBinding>
                         </Label.Text>
                     </Label>
-                
-                        <Label Text="{Binding Location}"
-                               FontAttributes="Bold"
-                         />           
-                 
-                    <StackLayout Orientation="Horizontal"
+                       
+                        <Label  TextColor="#4495FA" FontAttributes="Bold" VerticalTextAlignment="Center"
+HorizontalOptions="FillAndExpand">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Calificación: " />
+                                    <Span  Text="{Binding PromRating, StringFormat='{0:F1}'}"  />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+
+                        <StackLayout Orientation="Horizontal"
                               HorizontalOptions="FillAndExpand"
                               BindableLayout.ItemsSource="{Binding Tags}">
 
@@ -198,9 +212,19 @@ BackgroundColor="White">
                             </Grid>
                         </StackLayout>
                     </pan:PancakeView>
-
+                    <ContentView HeightRequest="8"/>
+                    <Button Text="Ver actividades" 
+                            CornerRadius="16" 
+                            IsVisible="{Binding ShowActivitiesButton}" 
+                            TextColor="White" 
+                            FontAttributes="Bold"
+                            BackgroundColor="#FFD24C"
+                            Grid.Column="1"
+                            Command="{Binding GoActivities}"
+                            />
                 </StackLayout>
             </StackLayout>
+            </RefreshView>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>
