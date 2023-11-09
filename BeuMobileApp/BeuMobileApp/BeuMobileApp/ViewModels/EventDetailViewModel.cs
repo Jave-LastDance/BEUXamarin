@@ -23,6 +23,9 @@ namespace BeuMobileApp.ViewModels
         public string Name { get; set; }
         public string Description { get; set; }
         public string[] Tags { get; set; }
+
+        public string[] Images { get; set; }
+
         public string Requirements { get; set; }
         public int Duration { get; set; }
         public string Location { get; set; }
@@ -35,6 +38,8 @@ namespace BeuMobileApp.ViewModels
         public float? Price { get; set; }
         public string UrlEvent { get; set; }
         public string UrlPhotos { get; set; }
+
+        public string UrlPhotosF { get; set; }
         public string HeadEmail { get; set; }
 
         public string CenterName { get; set; }
@@ -44,6 +49,7 @@ namespace BeuMobileApp.ViewModels
 
         public string CenterImage { get; set; }
 
+        public bool ShowIndicator { get; }
 
         public int EventIndex
         {
@@ -75,7 +81,7 @@ namespace BeuMobileApp.ViewModels
 
         public bool ShowActivitiesButton { get; set; }
 
-
+        public string CurrentImage;
         public int idUser { get; }
 
         public string CommentText { get; set; }
@@ -85,7 +91,6 @@ namespace BeuMobileApp.ViewModels
         public Command IncreaseRatingCommand { get; }
         public Command DecreaseRatingCommand { get; }
         public Command ImageChangedCommand { get; }
-        public Command PhotoCommand { get; }
 
         public Command EventUrl { get; }
 
@@ -108,7 +113,11 @@ namespace BeuMobileApp.ViewModels
             AddCommentCommand = new Command(async () => await AddComment());
             SaveRating = new Command(async () => await RateEvent(idUser));
             OpenLinkCommand = new Command(OpenLink);
-    }
+           
+
+            ImageChangedCommand = new Command<string>((i) => CurrentImage = i);
+           
+        }
 
         async void LoadEventData(int EventIndex)
         {
@@ -138,6 +147,12 @@ namespace BeuMobileApp.ViewModels
                 if(Activities.Count>0){
                     ShowActivitiesButton = true;
                 }
+                Images = SplitTags(UrlPhotos);
+                foreach (string str in Images)
+                {
+                    Console.WriteLine("ESTAS SON LAS URL DE LAS FOTOS: "+str);
+                }
+                UrlPhotosF = Images[0];
             }
 
         }
@@ -147,11 +162,7 @@ namespace BeuMobileApp.ViewModels
             return tags.Split(split, StringSplitOptions.None);
         }
 
-        private string[] SplitUrlPhotos(string urlPhotos)
-        {
-            return urlPhotos.Split(split, StringSplitOptions.None);
 
-        }
 
         private bool CanIncreaseRating()
         {
@@ -295,5 +306,7 @@ namespace BeuMobileApp.ViewModels
 
             await Shell.Current.GoToAsync($"{nameof(ActivityView)}" + $"?{nameof(ActivityViewModel.EventIndex)}={EventId}");
         }
+
+    
     }
 }
