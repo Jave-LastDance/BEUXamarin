@@ -200,9 +200,15 @@ namespace BeuMobileApp.ViewModels
 
             if (existingRating != null)
             {
-                existingRating.grade = EventRating;
+                Rating updateReating = new Rating
+                {
+                    idRatingXEvent = existingRating.idRatingXEvent,
+                    eventid_event = EventId,
+                    idUser = userId,
+                    grade = EventRating,
+                };
 
-                var updateResult = await eventService.PutRating(existingRating);
+                var updateResult = await eventService.PutRating(updateReating);
                 if (updateResult != null)
                 {
                     await Application.Current.MainPage.DisplayAlert("Éxito", "Operación exitosa", "OK");
