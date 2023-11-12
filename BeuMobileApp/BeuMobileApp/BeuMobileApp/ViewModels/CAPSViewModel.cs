@@ -100,7 +100,8 @@ namespace BeuMobileApp.ViewModels
             {
                 Console.WriteLine("Ningún elemento seleccionado.");
             }
-            await Shell.Current.GoToAsync($"{nameof(CFICCView)}");
+            //await Shell.Current.GoToAsync($"{nameof(CFICCView)}");
+            App.Current.MainPage = new CFICCView();
 
         }
     }

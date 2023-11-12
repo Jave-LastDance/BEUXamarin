@@ -3,7 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BeuMobileApp.Views.ProfileView"
              Title="Perfil"
+             xmlns:viewmodels="clr-namespace:BeuMobileApp.ViewModels" 
             >
+    <ContentPage.BindingContext>
+        <viewmodels:ProfileViewModel/>
+    </ContentPage.BindingContext>
+
     <ContentPage.Content>
         <StackLayout>
             <!-- Fondo con degradado -->
@@ -21,19 +26,24 @@
                    HeightRequest="200"
                    WidthRequest="200"
                    IsClippedToBounds="True">
-                        <Image Source="https://pm1.aminoapps.com/8035/36b0513e654687702da9c5ee8b792f71220b5a25r1-720-720v2_hq.jpg"
+                        <Image Source="{Binding CurrentUser.photo}"
                        BackgroundColor="#ffffff"
                        Aspect="AspectFill"
                        Margin="-8"
                        HeightRequest="100"
                        WidthRequest="100" />
                     </Frame>
-                    <Label Text="Firulaiss" 
-                   TextColor="White"
-                   FontSize="30"
-                   Padding="30"
-                   HorizontalOptions="Center"
-                   Margin="0,-20,0,0" />
+                    <Label Text="{Binding CurrentUser.firstname, StringFormat='{}{0} '}" 
+           TextColor="White" 
+           FontSize="30" 
+           HorizontalOptions="Center" />
+
+                    <Label Text="{Binding CurrentUser.lastname}" 
+           TextColor="White" 
+           FontSize="30" 
+           HorizontalOptions="Center" />
+
+
                 </StackLayout>
 
                 <!-- Botones en la parte blanca -->
@@ -49,7 +59,8 @@
                     BackgroundColor="#21BDA1" 
                     TextColor="White" 
                     Margin="20, 10, 20, 10"
-                    CornerRadius="20" />
+                    CornerRadius="20"
+                    Command="{Binding CJFDCommand}"/>
 
                     <Button Text="Eventos Guardados" 
                     BackgroundColor="#29B7CB" 
@@ -61,7 +72,8 @@
                     BackgroundColor="#EBA946" 
                     TextColor="White" 
                     Margin="20, 10, 20, 10"
-                    CornerRadius="20" />
+                    CornerRadius="20" 
+                    Clicked="CerrarSesionButton_Clicked"/>
                 </StackLayout>
             </Grid>
         </StackLayout>

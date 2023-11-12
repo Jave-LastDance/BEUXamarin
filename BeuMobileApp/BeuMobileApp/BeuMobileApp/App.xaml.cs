@@ -63,5 +63,6 @@ namespace BeuMobileApp
         protected override void OnResume()
         {
         }
+        public static UserResponse CurrentUser { get; set; }
     }
 }

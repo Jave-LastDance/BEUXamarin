@@ -6,7 +6,7 @@ using Xamarin.Forms;
 
 namespace BeuMobileApp.ViewModels
 {
-    public class ProfileViewModel 
+    public class ProfileViewModel
     {
         public Command LoginCommand { get; }
 
@@ -21,5 +21,7 @@ namespace BeuMobileApp.ViewModels
             // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
             await Shell.Current.GoToAsync($"//{nameof(EventView)}");
         }
+
+        public UserResponse CurrentUser => App.CurrentUser;
     }
 }

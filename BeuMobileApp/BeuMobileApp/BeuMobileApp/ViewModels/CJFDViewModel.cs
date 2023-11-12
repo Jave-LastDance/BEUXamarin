@@ -107,9 +107,9 @@ namespace BeuMobileApp.ViewModels
             {
                 Console.WriteLine("Ningún elemento seleccionado.");
             }
-            await Shell.Current.GoToAsync($"{nameof(CGCView)}");
+            //await Shell.Current.GoToAsync($"{nameof(CGCView)}");
+            App.Current.MainPage = new CGCView();
 
-           
         }
     }
 }

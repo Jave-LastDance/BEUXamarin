@@ -110,7 +110,8 @@ namespace BeuMobileApp.ViewModels
 
                    await Application.Current.MainPage.DisplayAlert("Prioridad Guardada", message, "OK");
 
-                    await Shell.Current.GoToAsync($"//{nameof(EventView)}");
+                    //await Shell.Current.GoToAsync($"//{nameof(EventView)}");
+                    App.Current.MainPage = new AppShell();
                 }
                 else
                 {
