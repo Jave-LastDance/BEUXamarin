@@ -8,12 +8,14 @@ namespace BeuMobileApp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ProfileView : ContentPage
     {
-        NotificationViewModel viewModel;
-        public ProfileView()
+
+        ProfileViewModel viewModel;
+
+        public ProfileView( )
         {
+            
             InitializeComponent();
-            this.BindingContext = new ProfileViewModel();
-            viewModel = new NotificationViewModel();
+            viewModel = new ProfileViewModel();
             BindingContext = viewModel;
         }
         private void DetallesCuentaButton_Clicked(object sender, EventArgs e)

@@ -101,7 +101,8 @@ namespace BeuMobileApp.ViewModels
             {
                 Console.WriteLine("Ningún elemento seleccionado.");
             }
-            await Shell.Current.GoToAsync($"{nameof(CAPSView)}");
+            //await Shell.Current.GoToAsync($"{nameof(CAPSView)}");
+            App.Current.MainPage = new CAPSView();
 
         }
     }

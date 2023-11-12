@@ -1,4 +1,5 @@
 ﻿using BeuMobileApp.InterfaceBeacons;
+using BeuMobileApp.ViewModels;
 using BeuMobileApp.Views;
 using Plugin.FirebasePushNotification;
 using System;
@@ -48,5 +49,6 @@ namespace BeuMobileApp
         protected override void OnResume()
         {
         }
+        public static UserResponse CurrentUser { get; set; }
     }
 }

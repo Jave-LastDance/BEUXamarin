@@ -1,8 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BeuMobileApp.Views.LoginView">
-    
+             x:Class="BeuMobileApp.Views.LoginView"
+             xmlns:viewmodels="clr-namespace:BeuMobileApp.ViewModels">
+             
+      <ContentPage.BindingContext>
+      <viewmodels:LoginViewModel/>
+  </ContentPage.BindingContext>
     
     <ContentPage.Content>
         <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="#4495FA" Padding="40">
@@ -12,13 +16,13 @@
             <Label Text="Bienvenido!" TextColor="White" FontSize="50" HorizontalOptions="CenterAndExpand" Margin="0, 40, 0, 10" />
 
             <Frame CornerRadius="10" BackgroundColor="#2980b9" Margin="10, 30, 10, 10" HeightRequest="50">
-                <Entry Placeholder="Username" PlaceholderColor="White" TextColor="White" BackgroundColor="Transparent" />
+                <Entry x:Name="CuentaEntry" Placeholder="Username" PlaceholderColor="White" Text="{Binding Username}" TextColor="White" BackgroundColor="Transparent" />
             </Frame>
             <Frame CornerRadius="10" BackgroundColor="#2980b9" Margin="10, 0, 10, 10" HeightRequest="50">
-                <Entry Placeholder="Password" PlaceholderColor="White" TextColor="White" IsPassword="True" BackgroundColor="Transparent" />
+                <Entry x:Name="PasswEntry" Placeholder="Password" PlaceholderColor="White" Text="{Binding Password}" TextColor="White" IsPassword="True" BackgroundColor="Transparent" />
             </Frame>
 
-            <Button Text="Login" BackgroundColor="#2c3e50" TextColor="White" Margin="10, 10, 10, 60" CornerRadius="10" Clicked="OnLoginButtonClicked" />
+            <Button Text="Login" BackgroundColor="#2c3e50" TextColor="White" Margin="10, 10, 10, 60" CornerRadius="10" Command="{Binding LoginCommand}" />
 
             <Label Text="Olvidaste tu contraseña?" TextColor="White" FontSize="15" HorizontalTextAlignment="Center" Margin="0, 20, 0, 10" >
                 <Label.GestureRecognizers>

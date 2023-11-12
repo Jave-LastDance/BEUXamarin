@@ -100,8 +100,8 @@ namespace BeuMobileApp.ViewModels
             {
                 Console.WriteLine("Ningún elemento seleccionado.");
             }
-            await Shell.Current.GoToAsync($"{nameof(CPSFJView)}");
-
+            //await Shell.Current.GoToAsync($"{nameof(CPSFJView)}");
+            App.Current.MainPage = new CPSFJView();
         }
     }
 }

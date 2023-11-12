@@ -1,7 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BeuMobileApp.Views.DetailsAccount">
+             x:Class="BeuMobileApp.Views.DetailsAccount"
+             xmlns:viewmodels="clr-namespace:BeuMobileApp.ViewModels" >
+
+    <ContentPage.BindingContext>
+        <viewmodels:ProfileViewModel/>
+    </ContentPage.BindingContext>
+    
     <Grid BackgroundColor="#3498db">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
@@ -16,28 +22,30 @@
                    HeightRequest="200"
                    WidthRequest="200"
                    IsClippedToBounds="True">
-                <Image Source="https://pm1.aminoapps.com/8035/36b0513e654687702da9c5ee8b792f71220b5a25r1-720-720v2_hq.jpg"
+                <Image Source="{Binding CurrentUser.photo}"
                        BackgroundColor="#ffffff"
                        Aspect="AspectFill"
                        Margin="-8"
                        HeightRequest="100"
                        WidthRequest="100" />
             </Frame>
-            <Label Text="Firulaiss" 
-                   TextColor="White"
-                   FontSize="30"
-                   Padding="30"
-                   HorizontalOptions="Center"
-                   Margin="0,-20,0,0" />
+            <Label Text="{Binding CurrentUser.firstname, StringFormat='{}{0} '}" 
+            TextColor="White" 
+            FontSize="30" 
+            HorizontalOptions="Center" />
 
+            <Label Text="{Binding CurrentUser.lastname}" 
+            TextColor="White" 
+            FontSize="30" 
+            HorizontalOptions="Center" />
 
-            <Label Text="Rol de la Persona" 
+            <Label Text="{Binding CurrentUser.rol}" 
                    TextColor="#ffff" 
                    FontSize="16" 
                    Margin="0, 10" 
                    HorizontalOptions="Center"/>
             <!-- Información de la persona -->
-            <Label Text="example@example.com" 
+            <Label Text="{Binding CurrentUser.programa}" 
                    TextColor="#ffff" 
                    FontSize="16" 
                    Margin="0, 20" 

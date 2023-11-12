@@ -99,9 +99,10 @@ namespace BeuMobileApp.ViewModels
             {
                 Console.WriteLine("Ningún elemento seleccionado.");
             }
-            await Shell.Current.GoToAsync($"{nameof(PriorityView)}");
+          // await Shell.Current.GoToAsync($"{nameof(PriorityView)}");
+            App.Current.MainPage = new PriorityView();
 
-            
+
         }
     }
 }
