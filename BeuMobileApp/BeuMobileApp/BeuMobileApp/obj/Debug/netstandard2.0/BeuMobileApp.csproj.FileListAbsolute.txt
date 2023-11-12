@@ -80,8 +80,10 @@ C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobile
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp\obj\Debug\netstandard2.0\BeuMobileApp.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
+C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp\obj\Debug\netstandard2.0\TitleViews\ActivityTitleView.xaml.g.cs
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp\obj\Debug\netstandard2.0\TitleViews\EventTitleView.xaml.g.cs
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp\obj\Debug\netstandard2.0\TitleViews\NotificationTitleView.xaml.g.cs
+C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp\obj\Debug\netstandard2.0\Views\ActivityView.xaml.g.cs
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp\obj\Debug\netstandard2.0\Views\CAPSView.xaml.g.cs
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp\obj\Debug\netstandard2.0\Views\CFICCView.xaml.g.cs
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp\obj\Debug\netstandard2.0\Views\CGCView.xaml.g.cs

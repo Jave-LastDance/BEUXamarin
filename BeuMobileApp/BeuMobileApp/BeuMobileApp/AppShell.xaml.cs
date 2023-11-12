@@ -24,7 +24,8 @@ namespace BeuMobileApp
             Routing.RegisterRoute(nameof(CFICCView), typeof(CFICCView));
             Routing.RegisterRoute(nameof(PriorityView), typeof(PriorityView));
             Routing.RegisterRoute(nameof(NotificationDetailView), typeof(NotificationDetailView));
-
+            Routing.RegisterRoute(nameof(ActivityView), typeof(ActivityView));
+            
         }
 
         private void Current_OnNotificationReceived(object source, FirebasePushNotificationDataEventArgs e)

@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="Behaviors.Forms" Version="1.4.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="7.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Plugin.FirebasePushNotification" Version="3.4.35" />
     <PackageReference Include="Plugin.Permissions" Version="6.0.1" />
@@ -37,10 +38,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="TitleViews\ActivityTitleView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="TitleViews\EventTitleView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="TitleViews\NotificationTitleView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ActivityView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\CAPSView.xaml">

@@ -15,15 +15,20 @@
 
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout Spacing="0">
-                <Grid>
-                    <Image Source="{Binding UrlPhotos}"
-                        HeightRequest="160"
-                        Aspect="AspectFill"/>
-                    <ImageButton Source="icon_fav.png"
-                             WidthRequest="50"
-                             HeightRequest="50"
-                             CornerRadius="25"
+            <RefreshView>
+                <StackLayout Spacing="0">
+                    <CarouselView ItemsSource="{Binding Images}" HeightRequest="200" IndicatorView="IndicatorView">
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Image Source="{Binding .}"
+                      
+                       Aspect="AspectFill"/>
+
+                                    <ImageButton Source="icon_link.png"
+                             WidthRequest="40"
+                             HeightRequest="40"
+                             CornerRadius="20"
                              HorizontalOptions="End"
                              VerticalOptions="End"
                              Margin="0,0,10,10"
@@ -31,163 +36,187 @@
                              Padding="0"
                              BorderColor="Transparent"
                              Grid.Row="0"
-                             Grid.Column="0" />
-   
-                </Grid>
-                <StackLayout Padding="16" Spacing="8">
-                    <Label Text="{Binding Name}" FontSize="Small" FontAttributes="Bold"/>
-                    <StackLayout Orientation="Horizontal" Spacing="2">
-                        <Label Text="{Binding PromRating, StringFormat='{0:F1}'}"
-                               TextColor="#4495FA"
-                               FontAttributes="Bold"
-                               VerticalTextAlignment="Center"
-                               HorizontalOptions="FillAndExpand"
+                             Grid.Column="0" 
+                             Command="{Binding OpenLinkCommand}"             
                      />
-                        <Label Text="{Binding Mode}"
+                                </Grid>
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
+                    <ContentView HeightRequest="20"/>
+                    <IndicatorView
+                        
+IndicatorColor="Gray"
+SelectedIndicatorColor="DarkGray"
+IndicatorSize="10"
+x:Name="IndicatorView"
+HorizontalOptions="Center"
+VerticalOptions="Center"/>
+                    <StackLayout Padding="16" Spacing="8">
+                        <Label Text="{Binding Name}" FontSize="Small" FontAttributes="Bold"/>
+                        <StackLayout Orientation="Horizontal" Spacing="2">
+
+                            <Label  TextColor="#4495FA" FontAttributes="Bold" VerticalTextAlignment="Center"
+HorizontalOptions="FillAndExpand">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Edificio: " />
+                                        <Span Text="{Binding Location}"   />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+
+                            <Label Text="{Binding Mode}"
                            TextColor="#4495FA"
                            FontAttributes="Bold"
                            VerticalTextAlignment="End"
                      />
-                    </StackLayout>
+                        </StackLayout>
 
-                    <Label>
-                        <Label.Text>
-                            <MultiBinding StringFormat="{} {0} | {1}">
-                                <Binding Path="DateStart"/>
-                                <Binding Path="TimeStart" />
-                            </MultiBinding>
-                        </Label.Text>
-                    </Label>
+                        <Label >
+                            <Label.Text>
+                                <MultiBinding StringFormat="{} {0} | {1}">
+                                    <Binding Path="DateStart"/>
+                                    <Binding Path="TimeStart" />
+                                </MultiBinding>
+                            </Label.Text>
+                        </Label>
 
-                    <Label>
-                        <Label.Text>
-                            <MultiBinding StringFormat="{} {0} | {1}">
-                                <Binding Path="DateEnd"/>
-                                <Binding Path="TimeEnd" />
-                            </MultiBinding>
-                        </Label.Text>
-                    </Label>
-                
-                        <Label Text="{Binding Location}"
-                               FontAttributes="Bold"
-                         />           
-                 
-                    <StackLayout Orientation="Horizontal"
+                        <Label >
+                            <Label.Text>
+                                <MultiBinding StringFormat="{} {0} | {1}">
+                                    <Binding Path="DateEnd"/>
+                                    <Binding Path="TimeEnd" />
+                                </MultiBinding>
+                            </Label.Text>
+                        </Label>
+
+                        <Label  TextColor="#4495FA" FontAttributes="Bold" VerticalTextAlignment="Center"
+HorizontalOptions="FillAndExpand">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Calificación: " />
+                                    <Span  Text="{Binding PromRating, StringFormat='{0:F1}'}"  />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+
+                        <StackLayout Orientation="Horizontal"
                               HorizontalOptions="FillAndExpand"
                               BindableLayout.ItemsSource="{Binding Tags}">
 
-                        <BindableLayout.ItemTemplate>
-                            <DataTemplate x:DataType="x:String">
-                                <pan:PancakeView BackgroundColor="#FFD24C"
+                            <BindableLayout.ItemTemplate>
+                                <DataTemplate x:DataType="x:String">
+                                    <pan:PancakeView BackgroundColor="#FFD24C"
                           Padding="4"
                           CornerRadius="8">
 
-                                    <Label Text="{Binding .}"
+                                        <Label Text="{Binding .}"
                     TextColor="White"
                     FontSize="Small"/>
 
-                                </pan:PancakeView>
-                            </DataTemplate>
-                        </BindableLayout.ItemTemplate>
-                    </StackLayout>
+                                    </pan:PancakeView>
+                                </DataTemplate>
+                            </BindableLayout.ItemTemplate>
+                        </StackLayout>
 
-                    <ContentView HeightRequest="8"/>
+                        <ContentView HeightRequest="8"/>
 
-                    <pan:PancakeView CornerRadius="16"
+                        <pan:PancakeView CornerRadius="16"
                         Padding="16"
                         BackgroundColor="White">
-                        <StackLayout Spacing="8">
-                            <Label Text="Descripción"  FontAttributes="Bold"/>
-                            <Label Text="{Binding Description}"/>
-                        </StackLayout>
-                    </pan:PancakeView>
+                            <StackLayout Spacing="8">
+                                <Label Text="Descripción"  FontAttributes="Bold"/>
+                                <Label Text="{Binding Description}"/>
+                            </StackLayout>
+                        </pan:PancakeView>
 
 
-                    <ContentView HeightRequest="8"/>
-                    <pan:PancakeView CornerRadius="16"
+                        <ContentView HeightRequest="8"/>
+                        <pan:PancakeView CornerRadius="16"
                         Padding="16"
                          BackgroundColor="White">
-                        <StackLayout Spacing="8">
-                            <Label Text="Contacto"  FontAttributes="Bold"/>
-                            <StackLayout Orientation="Horizontal"
+                            <StackLayout Spacing="8">
+                                <Label Text="Contacto"  FontAttributes="Bold"/>
+                                <StackLayout Orientation="Horizontal"
                                          Spacing="16">
 
-                                <pan:PancakeView CornerRadius="40"
+                                    <pan:PancakeView CornerRadius="40"
                                     HeightRequest="80"
                                     WidthRequest="80">
 
-                                    <Image Source="{Binding CenterImage}"
+                                        <Image Source="{Binding CenterImage}"
                                            Aspect="AspectFill"/>
 
-                                </pan:PancakeView>
+                                    </pan:PancakeView>
 
-                                <StackLayout Spacing="0" VerticalOptions="Center">
-                                    <Label Text="{Binding CenterName}"/>
-                                    <Label Text="{Binding HeadEmail}"/>
+                                    <StackLayout Spacing="0" VerticalOptions="Center">
+                                        <Label Text="{Binding CenterName}"/>
+                                        <Label Text="{Binding HeadEmail}"/>
+                                    </StackLayout>
                                 </StackLayout>
                             </StackLayout>
-                        </StackLayout>
-                    </pan:PancakeView>
-                  
-                    <ContentView HeightRequest="8"/>
-                    <pan:PancakeView CornerRadius="16"
+                        </pan:PancakeView>
+
+                        <ContentView HeightRequest="8"/>
+                        <pan:PancakeView CornerRadius="16"
                         Padding="16"
                          BackgroundColor="White">
-                        <StackLayout Spacing="8">
-                            <Label Text="Comentarios"  FontAttributes="Bold"/>
-                            <StackLayout BindableLayout.ItemsSource="{Binding Reviews}" Spacing="16">
-                                <BindableLayout.ItemTemplate>
-                                    <DataTemplate x:DataType="model:Review">
-                                        <pan:PancakeView CornerRadius="16"
+                            <StackLayout Spacing="8">
+                                <Label Text="Comentarios"  FontAttributes="Bold"/>
+                                <StackLayout BindableLayout.ItemsSource="{Binding Reviews}" Spacing="16">
+                                    <BindableLayout.ItemTemplate>
+                                        <DataTemplate x:DataType="model:Review">
+                                            <pan:PancakeView CornerRadius="16"
                                                               Padding="16"  BackgroundColor="#F4F4F4">
-                                            <StackLayout>
-                                                <Label Text="{Binding comment}" FontAttributes="Italic"/>
-                                            </StackLayout>
-                                        </pan:PancakeView>
-                                    </DataTemplate>
-                                </BindableLayout.ItemTemplate>
+                                                <StackLayout>
+                                                    <Label Text="{Binding comment}" FontAttributes="Italic"/>
+                                                </StackLayout>
+                                            </pan:PancakeView>
+                                        </DataTemplate>
+                                    </BindableLayout.ItemTemplate>
+                                </StackLayout>
                             </StackLayout>
-                        </StackLayout>
-                    </pan:PancakeView>
-                  
-                    <ContentView HeightRequest="8"/>
+                        </pan:PancakeView>
 
-                    <pan:PancakeView CornerRadius="16"
+                        <ContentView HeightRequest="8"/>
+
+                        <pan:PancakeView CornerRadius="16"
                                     Padding="16"
                                      BackgroundColor="White"
                                      >
-                        <StackLayout Spacing="8">
-                            <Label Text="Tu comentario"  FontAttributes="Bold"/>
-                            <Entry Text="{Binding CommentText}" Placeholder="Escribe tu comentario..." FontSize="Small" />
-                            <Button Text="Comentar" 
+                            <StackLayout Spacing="8">
+                                <Label Text="Tu comentario"  FontAttributes="Bold"/>
+                                <Entry Text="{Binding CommentText}" Placeholder="Escribe tu comentario..." FontSize="Small" />
+                                <Button Text="Comentar" 
                                     CornerRadius="16" 
                                     TextColor="White" 
                                     FontAttributes="Bold"
                                     BackgroundColor="#4495FA"
                                     Command="{Binding AddCommentCommand}"/>
-                        </StackLayout>
-                    </pan:PancakeView>
+                            </StackLayout>
+                        </pan:PancakeView>
 
-                    <ContentView HeightRequest="8"/>
-                    <pan:PancakeView CornerRadius="16"
+                        <ContentView HeightRequest="8"/>
+                        <pan:PancakeView CornerRadius="16"
 Padding="16"
 BackgroundColor="White">
-                        <StackLayout Spacing="8">
-                            <Label Text="Tu calificación"  FontAttributes="Bold"/>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto" />
+                            <StackLayout Spacing="8">
+                                <Label Text="Tu calificación"  FontAttributes="Bold"/>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
 
-                                    <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
 
-                                </Grid.ColumnDefinitions>
+                                    </Grid.ColumnDefinitions>
 
-                                <StackLayout Orientation="Horizontal" Grid.Column="0" VerticalOptions="Center">
-                                    <Button Text="-" BackgroundColor="Transparent" TextColor="Black"  FontAttributes="Bold" FontSize="Large" Command="{Binding DecreaseRatingCommand}"/>
-                                    <Label Text="{Binding EventRating}"  VerticalOptions="Center" HorizontalOptions="CenterAndExpand" FontSize="Large"/>
-                                    <Button Text="+" BackgroundColor="Transparent" TextColor="Black" FontAttributes="Bold" FontSize="Large" Command="{Binding IncreaseRatingCommand}"/>
-                                </StackLayout>
-                                <Button Text="Calificar" 
+                                    <StackLayout Orientation="Horizontal" Grid.Column="0" VerticalOptions="Center">
+                                        <Button Text="-" BackgroundColor="Transparent" TextColor="Black"  FontAttributes="Bold" FontSize="Large" Command="{Binding DecreaseRatingCommand}"/>
+                                        <Label Text="{Binding EventRating}"  VerticalOptions="Center" HorizontalOptions="CenterAndExpand" FontSize="Large"/>
+                                        <Button Text="+" BackgroundColor="Transparent" TextColor="Black" FontAttributes="Bold" FontSize="Large" Command="{Binding IncreaseRatingCommand}"/>
+                                    </StackLayout>
+                                    <Button Text="Calificar" 
                                        CornerRadius="16" 
                                        TextColor="White" 
                                        FontAttributes="Bold"
@@ -195,12 +224,22 @@ BackgroundColor="White">
                                        Grid.Column="1"
                                        Command="{Binding SaveRating}"/>
 
-                            </Grid>
-                        </StackLayout>
-                    </pan:PancakeView>
-
+                                </Grid>
+                            </StackLayout>
+                        </pan:PancakeView>
+                        <ContentView HeightRequest="8"/>
+                        <Button Text="Ver actividades" 
+                            CornerRadius="16" 
+                            IsVisible="{Binding ShowActivitiesButton}" 
+                            TextColor="White" 
+                            FontAttributes="Bold"
+                            BackgroundColor="#FFD24C"
+                            Grid.Column="1"
+                            Command="{Binding GoActivities}"
+                            />
+                    </StackLayout>
                 </StackLayout>
-            </StackLayout>
+            </RefreshView>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

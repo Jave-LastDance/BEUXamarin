@@ -41,7 +41,9 @@ namespace BeuMobileApp.ViewModels
 
         public Command TapCommand { get; }
 
-        private  int EventIndex { get; }
+  
+
+        private int EventIndex { get; }
 
         public EventTitleViewModel(Event evnt)
         {
@@ -49,7 +51,6 @@ namespace BeuMobileApp.ViewModels
 
 
             TapCommand = new Command(TapCallback);
-
             Image = evnt.Url_poster;
             Name = evnt.Name;
             Description = evnt.Description;
@@ -90,6 +91,7 @@ namespace BeuMobileApp.ViewModels
             
             await Shell.Current.GoToAsync($"{nameof(EventDetailView)}" + $"?{nameof(EventDetailViewModel.EventIndex)}={EventIndex}");
         }
-    
+
+       
     }
 }

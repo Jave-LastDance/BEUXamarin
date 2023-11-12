@@ -15,6 +15,7 @@ namespace BeuMobileApp.ViewModels
 
     public class CJFDViewModel: BaseViewModel
     {
+        public int IdUser { get; set; }
         public ObservableCollection<Preference> AvailableServices { get; set; }
         public ObservableCollection<Preference> SelectedPreferences{ get; set; }
         public ICommand SaveCommand { get; set; }
@@ -24,6 +25,7 @@ namespace BeuMobileApp.ViewModels
 
         public CJFDViewModel()
         {
+            IdUser = UserSession.IdUsuario;
             personalizationService = new PersonalizationService();
             AvailableServices = new ObservableCollection<Preference>();
             LoadPreferencesCommand = new Command(async () => await LoadPreferences());
@@ -77,13 +79,13 @@ namespace BeuMobileApp.ViewModels
             {
                 
                 List<PreferenceUser> selectedPrefUsers = new List<PreferenceUser>();
-                int idUser = 7;
+           
 
                 foreach (var preference in selectedPreferences)
                 {
                     PreferenceUser prefUser = new PreferenceUser
                     {
-                        id_user = idUser, 
+                        id_user = IdUser, 
                         preferenceid_preference = preference.Id_preference
                     };
                     

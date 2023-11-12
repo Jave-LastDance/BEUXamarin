@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BeuMobileApp.Views.ActivityView"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             xmlns:viewmodels="clr-namespace:BeuMobileApp.ViewModels" 
+             xmlns:title="clr-namespace:BeuMobileApp.TitleViews"
+             ios:Page.UseSafeArea="true"
+             BackgroundColor="#F4F4F4" 
+             Title="Actividades">
+
+    <ContentPage.BindingContext>
+        <viewmodels:ActivityViewModel/>
+    </ContentPage.BindingContext>
+    <RefreshView Command="{Binding LoadActivitiesCommand}"
+     IsRefreshing="{Binding IsBusy, Mode=TwoWay}"
+     Padding="5">
+        <AbsoluteLayout>
+
+
+            <CollectionView ItemsSource="{Binding Activities}" Margin="16">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="15"/>
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Margin="5" Padding="5" CornerRadius="10" HasShadow="True">
+                            <title:ActivityTitleView/>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </AbsoluteLayout>
+    </RefreshView>
+</ContentPage>

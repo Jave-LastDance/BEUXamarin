@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BeuMobileApp.TitleViews.ActivityTitleView"
+             BackgroundColor="#F4F4F4"
+             xmlns:pan="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" 
+             xmlns:titleviews="clr-namespace:BeuMobileApp.TitleViews" 
+            xmlns:viewmodels="clr-namespace:BeuMobileApp.ViewModels" 
+             x:DataType="viewmodels:ActivityTitleViewModel"
+             >
+
+
+
+    <RelativeLayout>
+        <pan:PancakeView x:Name="card"
+                         CornerRadius="16"
+                         Padding="16"
+                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
+            
+            <StackLayout Spacing="8">
+
+                <StackLayout Orientation="Horizontal">
+
+                    <Label Text="{Binding Topic}"
+                        FontAttributes="Bold" TextColor="#4495FA"/>
+
+                    <ContentView HorizontalOptions="FillAndExpand"/>
+
+                    <Label Text="{Binding Date}" />
+                        
+
+                </StackLayout>
+
+
+
+                <Grid RowDefinitions="90"
+                      ColumnDefinitions="90,*"
+                      ColumnSpacing="8">
+
+                    <pan:PancakeView CornerRadius="12">
+
+                        <Image Source="{Binding Url_poster}"
+                               Aspect="AspectFill"/>
+
+                    </pan:PancakeView>
+
+                    <StackLayout VerticalOptions="Center"
+                                 Spacing="1"
+                                 Grid.Column="1">
+
+                        <Label Text="{Binding Name}"
+                            MaxLines="2"
+                            FontSize="Small"
+                            FontAttributes="Bold"/>
+
+                        <Label>
+                            <Label.Text>
+                                <MultiBinding StringFormat="{}{0} | {1}">
+                                    <Binding Path="Time_start"/>
+                                    <Binding Path="Time_end"/>
+                                </MultiBinding>
+                            </Label.Text>
+                        </Label>
+
+                        <Label Text="{Binding Description}"
+                                 LineBreakMode="WordWrap"
+                                 FontSize="Small"
+                        />
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+        </pan:PancakeView>
+    </RelativeLayout>
+</ContentView>

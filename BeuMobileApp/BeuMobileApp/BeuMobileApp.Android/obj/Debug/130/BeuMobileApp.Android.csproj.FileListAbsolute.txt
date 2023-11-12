@@ -1726,15 +1726,18 @@ C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobile
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\res\drawable\xamarin_logo.png
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\res\drawable\icon_about.png
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\res\drawable\icon_feed.png
-C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\res\drawable\icon_profile.png
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\res\drawable\capslogo.png
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\res\drawable\cjfdlogo.png
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\res\drawable\cgclogo.png
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\res\drawable\cpsfjlogo.png
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\res\drawable\cficclogo.png
-C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\res\drawable\icon_link.png
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\res\drawable\logobeuh.png
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\res\drawable\logobeuv.png
+C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\res\drawable\icon_saved.png
+C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\res\drawable\icon_tosave.png
+C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\res\drawable\icon_fav.png
+C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\res\drawable\icon_profile.png
+C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\res\drawable\icon_link.png
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\uploadflags.txt
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\resolvedassemblies.hash
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\android\assets\AndroidAltBeaconLibrary.dll
@@ -1748,6 +1751,11 @@ C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobile
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\android\assets\FormsViewGroup.pdb
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\android\assets\Java.Interop.dll
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\android\assets\Java.Interop.pdb
+C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\android\assets\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\android\assets\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\android\assets\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\android\assets\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\android\assets\Microsoft.Extensions.Primitives.dll
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\android\assets\Mono.Android.dll
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\android\assets\Mono.Android.pdb
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\android\assets\Mono.Security.dll
@@ -1762,6 +1770,7 @@ C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobile
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\android\assets\Plugin.Permissions.dll
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\android\assets\Plugin.Permissions.pdb
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\android\assets\PropertyChanged.dll
+C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\android\assets\System.Buffers.dll
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\android\assets\System.Collections.dll
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\android\assets\System.ComponentModel.Composition.dll
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\android\assets\System.ComponentModel.Composition.pdb
@@ -1780,6 +1789,7 @@ C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobile
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\android\assets\System.IO.Compression.FileSystem.dll
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\android\assets\System.IO.Compression.FileSystem.pdb
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\android\assets\System.IO.Compression.pdb
+C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\android\assets\System.Memory.dll
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\android\assets\System.Net.Http.dll
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\android\assets\System.Net.Http.pdb
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\android\assets\System.Numerics.dll
@@ -1790,6 +1800,7 @@ C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobile
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\android\assets\System.pdb
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\android\assets\System.Reflection.dll
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\android\assets\System.Reflection.Extensions.dll
+C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\android\assets\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\android\assets\System.Runtime.dll
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\android\assets\System.Runtime.Extensions.dll
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\android\assets\System.Runtime.Serialization.dll
@@ -2458,6 +2469,3 @@ C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobile
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\stamp\_GenerateJavaStubs.stamp
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\stamp\_ResolveLibraryProjectImports.stamp
-C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\res\drawable\icon_saved.png
-C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\res\drawable\icon_tosave.png
-C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\res\drawable\icon_fav.png
