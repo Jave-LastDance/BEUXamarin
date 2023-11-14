@@ -1,6 +1,4 @@
-﻿using System;
-
-using Android.App;
+﻿using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
@@ -10,12 +8,15 @@ using Plugin.Permissions;
 using BeuMobileApp.InterfaceBeacons;
 using Xamarin.Forms;
 using Plugin.FirebasePushNotification;
+using Android.Content;
+
 
 namespace BeuMobileApp.Droid
 {
     [Activity(Label = "BeuMobileApp", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize )]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity, IBeaconConsumer
     {
+        
         protected override void OnCreate(Bundle savedInstanceState)
         {
             TabLayoutResource = Resource.Layout.Tabbar;
@@ -28,7 +29,15 @@ namespace BeuMobileApp.Droid
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
             FirebasePushNotificationManager.ProcessIntent(this, Intent);
+            //Beacons signal
+            //var intent = new Intent(this, typeof(BeaconMonitoringService));
+           // StartForegroundService(intent);
+
+
         }
+      
+
+       
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -39,7 +48,8 @@ namespace BeuMobileApp.Droid
         protected override void OnDestroy()
         {
             base.OnDestroy();
-            DependencyService.Get<IbeaconAndroid>().OnDestroy();
+            // DependencyService.Get<IbeaconAndroid>().OnDestroy();
+            
         }
 
         void IBeaconConsumer.OnBeaconServiceConnect()

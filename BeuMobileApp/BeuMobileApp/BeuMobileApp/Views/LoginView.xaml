@@ -18,7 +18,7 @@
                 <Entry Placeholder="Password" PlaceholderColor="White" TextColor="White" IsPassword="True" BackgroundColor="Transparent" />
             </Frame>
 
-            <Button Text="Login" BackgroundColor="#2c3e50" TextColor="White" Margin="10, 10, 10, 60" CornerRadius="10" Clicked="OnLoginButtonClicked" />
+            <Button Text="Login" BackgroundColor="#2c3e50" TextColor="White" Margin="10, 10, 10, 60" CornerRadius="10" Clicked="OnLoginButtonClicked"/>
 
             <Label Text="Olvidaste tu contraseña?" TextColor="White" FontSize="15" HorizontalTextAlignment="Center" Margin="0, 20, 0, 10" >
                 <Label.GestureRecognizers>

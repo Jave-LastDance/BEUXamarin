@@ -16,7 +16,7 @@ namespace BeuMobileApp.Services
         {
             client = new HttpClient
             {
-                BaseAddress = new Uri("http://192.168.0.6:8082/personalizacionPUJ/")
+                BaseAddress = new Uri("http://190.156.243.87:8888/personalizacionPUJ/")
             };
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Add("Accept", "application/json");
@@ -30,7 +30,7 @@ namespace BeuMobileApp.Services
            {
                  
 
-                 HttpResponseMessage response = await client.GetAsync("preferencias/"+nameCenter);
+                 HttpResponseMessage response = await client.GetAsync("preferencias/centro/"+nameCenter);
                  if (response.IsSuccessStatusCode)
                   {
                      

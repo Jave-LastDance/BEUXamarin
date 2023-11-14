@@ -17,7 +17,7 @@ namespace BeuMobileApp.Services
         {
             client = new HttpClient
             {
-                BaseAddress = new Uri("http://192.168.0.6:8081/eventosPUJ/")
+                BaseAddress = new Uri("http://190.156.243.87:8888/eventosPUJ/")
             };
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Add("Accept", "application/json");
@@ -55,7 +55,7 @@ namespace BeuMobileApp.Services
                 try
                 {
         
-                    HttpResponseMessage response = await client.GetAsync("evento/"+Id);
+                    HttpResponseMessage response = await client.GetAsync("evento/" + Id);
                     if (response.IsSuccessStatusCode)
                     {
                      
@@ -84,7 +84,7 @@ namespace BeuMobileApp.Services
                 
                 string json = JsonConvert.SerializeObject(newReview);
                 StringContent jsoncontent = new StringContent(json, Encoding.UTF8, "application/json");
-                HttpResponseMessage response = await client.PostAsync("comentarioPUJ/comentario/evento", jsoncontent);
+                HttpResponseMessage response = await client.PostAsync("evento/comentario", jsoncontent);
                 if (response.IsSuccessStatusCode)
                 {
                     
@@ -115,7 +115,7 @@ namespace BeuMobileApp.Services
                
                 string json = JsonConvert.SerializeObject(updateReview);
                 StringContent jsoncontent = new StringContent(json, Encoding.UTF8, "application/json");
-                HttpResponseMessage response = await client.PutAsync("comentarioPUJ/comentario/evento", jsoncontent);
+                HttpResponseMessage response = await client.PutAsync("comentario", jsoncontent);
                 if (response.IsSuccessStatusCode)
                 {
                    
@@ -142,7 +142,7 @@ namespace BeuMobileApp.Services
             try
             {
 
-                HttpResponseMessage response = await client.GetAsync("ratingPUJ/evento/usuario/"+IdUs+"/"+IdEvent);
+                HttpResponseMessage response = await client.GetAsync("califacion/evento/usuario" + IdUs+"/"+IdEvent);
                 if (response.IsSuccessStatusCode)
                 {
                   
@@ -172,7 +172,7 @@ namespace BeuMobileApp.Services
                
                 string json = JsonConvert.SerializeObject(newRating);
                 StringContent jsoncontent = new StringContent(json, Encoding.UTF8, "application/json");
-                HttpResponseMessage response = await client.PostAsync("ratingPUJ/evento/rating", jsoncontent);
+                HttpResponseMessage response = await client.PostAsync("evento/comentario", jsoncontent);
                 if (response.IsSuccessStatusCode)
                 {
                    
@@ -204,7 +204,7 @@ namespace BeuMobileApp.Services
                
                 string json = JsonConvert.SerializeObject(updateRating);
                 StringContent jsoncontent = new StringContent(json, Encoding.UTF8, "application/json");
-                HttpResponseMessage response = await client.PutAsync("ratingPUJ/evento/rating", jsoncontent);
+                HttpResponseMessage response = await client.PutAsync("rating", jsoncontent);
                 if (response.IsSuccessStatusCode)
                 {
                     
@@ -234,7 +234,7 @@ namespace BeuMobileApp.Services
             try
             {
 
-                HttpResponseMessage response = await client.GetAsync("actividadesPUJ/actividades/evento/"+idEvnt);
+                HttpResponseMessage response = await client.GetAsync("actividad/" + idEvnt);
                 if (response.IsSuccessStatusCode)
                 {
 

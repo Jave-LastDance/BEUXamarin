@@ -106,8 +106,12 @@ namespace BeuMobileApp.ViewModels
 
         private void startRangingBeacon()
         {
+
+            
+
             if (Device.RuntimePlatform == Device.Android)
             {
+
                 var beaconService = Xamarin.Forms.DependencyService.Get<IbeaconAndroid>();
                 beaconService.BluetoothEnable();
 

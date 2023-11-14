@@ -15,7 +15,7 @@ using Plugin.Permissions.Abstractions;
 
 namespace BeuMobileApp.BeaconsLocation
 {
-    internal class BeaconDetection
+    public class BeaconDetection
     {
         public bool IsStartedRanging { get; set; }
 

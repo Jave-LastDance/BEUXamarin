@@ -6,10 +6,11 @@ namespace BeuMobileApp.Models
 {
     public class NotificationFirebase
     {
-        public string DeviceToken { get; set; }
-        public string Title { get; set; }
-        public string Body { get; set; }
-        public string Image {  get; set; }
-        public Dictionary<string, string> Data { get; set; }
+        public string tokenDevice { get; set; }
+
+        public int userId { get; set; }
+
+
+        public int beaconId { get; set; }
     }
 }

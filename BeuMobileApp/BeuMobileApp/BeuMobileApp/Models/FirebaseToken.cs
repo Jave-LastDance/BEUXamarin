@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BeuMobileApp.Models
 {
-    static class FirebaseToken
+    public static class FirebaseToken
     {
         public static string TokenUser {  get; set; }
     }

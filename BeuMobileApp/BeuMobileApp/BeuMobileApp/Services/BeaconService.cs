@@ -16,7 +16,7 @@ namespace BeuMobileApp.Services
         {
             client = new HttpClient
             {
-                BaseAddress = new Uri("http://192.168.0.6:8084/beacons/")
+                BaseAddress = new Uri("http://190.156.243.87:8888/beaconPUJ/")
             };
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Add("Accept", "application/json");
@@ -28,7 +28,7 @@ namespace BeuMobileApp.Services
             try
             {
 
-                HttpResponseMessage response = await client.GetAsync("?beaconId=" + Id);
+                HttpResponseMessage response = await client.GetAsync("id?beaconId=" + Id);
                 if (response.IsSuccessStatusCode)
                 {
 

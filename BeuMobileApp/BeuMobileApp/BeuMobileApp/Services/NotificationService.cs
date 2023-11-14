@@ -16,7 +16,7 @@ namespace BeuMobileApp.Services
         {
             client = new HttpClient
             {
-                BaseAddress = new Uri("http://192.168.0.6:8085/notificationsPUJ/")
+                BaseAddress = new Uri("http://190.156.243.87:8888/notificacionPUJ/")
             };
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Add("Accept", "application/json");
@@ -29,7 +29,7 @@ namespace BeuMobileApp.Services
             {
                 
 
-                HttpResponseMessage response = await client.GetAsync("notifications/user/"+ idUser);
+                HttpResponseMessage response = await client.GetAsync("notificaciones/" + idUser);
                 if (response.IsSuccessStatusCode)
                 {
                   
@@ -56,7 +56,7 @@ namespace BeuMobileApp.Services
             try
             {
 
-                HttpResponseMessage response = await client.GetAsync("notification/" + IdNot);
+                HttpResponseMessage response = await client.GetAsync("notificacion/" + IdNot);
                 if (response.IsSuccessStatusCode)
                 {
                     

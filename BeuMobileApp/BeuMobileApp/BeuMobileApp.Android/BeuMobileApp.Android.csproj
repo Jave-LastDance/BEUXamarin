@@ -89,6 +89,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AltBeaconService.cs" />
+    <Compile Include="BeaconMonitoringService .cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="MainApplication.cs" />
     <Compile Include="MonitorNotifier.cs" />

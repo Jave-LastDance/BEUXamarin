@@ -11,9 +11,11 @@
   <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
   <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
   <uses-permission android:name="android.permission.INTERNET" />
-  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
   <uses-permission android:name="android.permission.BLUETOOTH" android:required="false" />
   <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" android:required="false" />
+  <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
   <permission android:name="co.edu.javeriana.beu.mobileapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature" />
   <uses-permission android:name="co.edu.javeriana.beu.mobileapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
@@ -38,9 +40,10 @@
         <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
       </intent-filter>
     </receiver>
-    <service android:name="co.edu.javeriana.beu.mobileapp.services.BeaconDetectionService" android:enabled="true" android:exported="false" />
+    <service android:name="co.edu.javeriana.beu.mobileapp.BeaconMonitoringService" android:exported="false" android:permission="android.permission.FOREGROUND_SERVICE" />
     <!-- Aquí se pueden agregar otros componentes de la aplicación, como activities, services, etc. -->
     <uses-library android:name="org.apache.http.legacy" android:required="false" />
+    <service android:name="crc6405fc9578de4bed43.BeaconMonitoringService" />
     <activity android:name="crc6405fc9578de4bed43.MainActivity" android:configChanges="orientation|smallestScreenSize|screenLayout|screenSize|uiMode" android:exported="true" android:icon="@mipmap/icon" android:label="BeuMobileApp" android:theme="@style/MainTheme">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />

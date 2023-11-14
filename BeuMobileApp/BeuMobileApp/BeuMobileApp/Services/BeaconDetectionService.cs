@@ -20,9 +20,7 @@ namespace BeuMobileApp.Services
         protected override Task ExecuteAsync(CancellationToken stoppingToken)
 
         {
-            Console.WriteLine("ID USUARIO BEACONDETECSWERV: " + UserSession.IdUsuario);
-            Console.WriteLine("TOKEN FIREBASE BEACONDETECSWERV: " + FirebaseToken.TokenUser);
-
+           
 
             // Initialize beacon detection
 
