@@ -19,11 +19,12 @@ namespace BeuMobileApp.ViewModels
         public ObservableCollection<Preference> SelectedPreferences { get; set; }
         public ICommand SaveCommand { get; set; }
         public ICommand LoadPreferencesCommand { get; }
-
+        public UserResponse CurrentUser => App.CurrentUser;
+        
 
         private readonly PersonalizationService personalizationService;
         public CGCViewModel() {
-            IdUser = UserSession.IdUsuario;
+            IdUser = CurrentUser.id;
             personalizationService = new PersonalizationService();
             AvailableServices = new ObservableCollection<Preference>();
             LoadPreferencesCommand = new Command(async () => await LoadPreferences());

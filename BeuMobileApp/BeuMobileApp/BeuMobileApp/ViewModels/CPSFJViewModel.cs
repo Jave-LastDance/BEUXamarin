@@ -21,9 +21,9 @@ namespace BeuMobileApp.ViewModels
         public ICommand LoadPreferencesCommand { get; }
 
         private readonly PersonalizationService personalizationService;
-
+        public UserResponse CurrentUser => App.CurrentUser;
         public CPSFJViewModel() {
-            IdUser = UserSession.IdUsuario;
+            IdUser = CurrentUser.id;
             personalizationService = new PersonalizationService();
             AvailableServices = new ObservableCollection<Preference>();
             LoadPreferencesCommand = new Command(async () => await LoadPreferences());

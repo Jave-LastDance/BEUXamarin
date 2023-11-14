@@ -1,4 +1,6 @@
-﻿using BeuMobileApp.Views;
+﻿using BeuMobileApp.Models;
+using BeuMobileApp.Services;
+using BeuMobileApp.Views;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -13,7 +15,7 @@ namespace BeuMobileApp.ViewModels
     {
         private string username;
         private string password;
-
+        private readonly PersonalizationService personalizationService;
         public string Username
         {
             get { return username; }
@@ -37,6 +39,7 @@ namespace BeuMobileApp.ViewModels
         {
             LoginCommand = new Command(OnLoginClicked);
             CJFDCommand = new Command(OnCJFDClicked);
+            personalizationService = new PersonalizationService();
         }
 
         private async void OnLoginClicked(object obj)
@@ -60,16 +63,20 @@ namespace BeuMobileApp.ViewModels
                         {
                             App.CurrentUser = userResponse;
 
+                            int UserSession = userResponse.id;
                            
-                                if (userResponse.seccionIniciada)
-                                {
-                                    App.Current.MainPage = new AppShell();
-                                }
-                                else
-                                {
+                            var pref = await personalizationService.GetPreferencesUser(UserSession);
+
+                            if (pref != null && pref.Count > 0)
+                            {
+                                App.Current.MainPage = new AppShell();
+                            }
+                            else
+                            {
                                 OnCJFDClicked(null);
                             }
-                            
+
+
                         }
                         else
                         {

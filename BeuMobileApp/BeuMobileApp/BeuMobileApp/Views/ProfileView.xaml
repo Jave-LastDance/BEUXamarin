@@ -62,12 +62,6 @@
                     CornerRadius="20"
                     Command="{Binding CJFDCommand}"/>
 
-                    <Button Text="Eventos Guardados" 
-                    BackgroundColor="#29B7CB" 
-                    TextColor="White" 
-                    Margin="20, 10, 20, 10"
-                    CornerRadius="20" />
-
                     <Button Text="Cerrar Sesión" 
                     BackgroundColor="#EBA946" 
                     TextColor="White" 

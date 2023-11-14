@@ -15,17 +15,18 @@ namespace BeuMobileApp.ViewModels
 
     public class CJFDViewModel: BaseViewModel
     {
-        public int IdUser { get; set; }
+        public int IdUser { get; }
         public ObservableCollection<Preference> AvailableServices { get; set; }
         public ObservableCollection<Preference> SelectedPreferences{ get; set; }
         public ICommand SaveCommand { get; set; }
         public ICommand LoadPreferencesCommand { get; }
 
         private readonly PersonalizationService personalizationService;
-
+        public UserResponse CurrentUser => App.CurrentUser;
+       
         public CJFDViewModel()
         {
-            IdUser = UserSession.IdUsuario;
+            IdUser = CurrentUser.id;
             personalizationService = new PersonalizationService();
             AvailableServices = new ObservableCollection<Preference>();
             LoadPreferencesCommand = new Command(async () => await LoadPreferences());

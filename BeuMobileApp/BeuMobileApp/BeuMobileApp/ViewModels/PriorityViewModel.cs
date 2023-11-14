@@ -18,6 +18,7 @@ namespace BeuMobileApp.ViewModels
         public ICommand SaveCommand { get; set; }
 
         private readonly PersonalizationService personalizationService;
+        public UserResponse CurrentUser => App.CurrentUser;
 
         private string location;
         public string Location
@@ -78,7 +79,7 @@ namespace BeuMobileApp.ViewModels
 
 
         public PriorityViewModel() {
-            IdUser = UserSession.IdUsuario;
+            IdUser = CurrentUser.id;
             personalizationService = new PersonalizationService();
             SaveCommand = new Command(() => SavePreferences());
         }
