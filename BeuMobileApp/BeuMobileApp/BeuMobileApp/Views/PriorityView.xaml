@@ -22,7 +22,8 @@
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
-            <Image Source="logobeuh.png" Aspect="AspectFit" WidthRequest="200" HorizontalOptions="Center" VerticalOptions="Start" Grid.Row="0" />
+            <Image Source="logobeu.png" Aspect="AspectFit" WidthRequest="100" HeightRequest="100" 
+   HorizontalOptions="Center" VerticalOptions="Start" Margin="0,10,0,0" />
 
             <Label Text="¡Queremos conocerte!"
                  TextColor="Black"

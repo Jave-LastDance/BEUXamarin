@@ -19,12 +19,7 @@
         <CollectionView ItemsSource="{Binding Notifications}"
                         Margin="16"
                         >
-            <CollectionView.Header>
-                <StackLayout VerticalOptions="Center" Margin="20">
-                    <Button VerticalOptions="Center" Text="Notificaciones" Command="{Binding NotificationCommand}"/>
-                    <Button VerticalOptions="Center" Text="CJFD" Command="{Binding CJFDCommand}"/>
-                </StackLayout>
-            </CollectionView.Header>
+            
             <CollectionView.ItemsLayout>
                 <LinearItemsLayout Orientation="Vertical"
                                    ItemSpacing="15"/>
@@ -34,7 +29,7 @@
                     <title:NotificationTitleView />
                 </DataTemplate>
             </CollectionView.ItemTemplate>
-     
+            
         </CollectionView>
     </RefreshView>
 </ContentPage>

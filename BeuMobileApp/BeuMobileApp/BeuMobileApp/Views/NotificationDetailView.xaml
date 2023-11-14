@@ -60,6 +60,9 @@
                         </StackLayout>
                     </pan:PancakeView>
                 </Frame>
+                <StackLayout VerticalOptions="Center" Margin="20">
+                    <Button VerticalOptions="Center" Text="Eliminar" Command="{Binding NotificationDeleteCommand}" BackgroundColor="#A01E07"/>
+                </StackLayout>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

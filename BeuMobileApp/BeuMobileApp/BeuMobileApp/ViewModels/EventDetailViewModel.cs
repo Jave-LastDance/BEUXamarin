@@ -197,9 +197,10 @@ namespace BeuMobileApp.ViewModels
         public async Task RateEvent(int userId)
         {
             Rating existingRating = await eventService.GetRating(userId, EventId);
-
+            Console.WriteLine("RTA GET" + existingRating);
             if (existingRating != null)
             {
+                Console.WriteLine("Estoy actualizando");
                 Rating updateReating = new Rating
                 {
                     idRatingXEvent = existingRating.idRatingXEvent,
@@ -209,13 +210,14 @@ namespace BeuMobileApp.ViewModels
                 };
 
                 var updateResult = await eventService.PutRating(updateReating);
+                Console.Write("RESULTADO UPDATE: " + updateResult);
                 if (updateResult != null)
                 {
-                    await Application.Current.MainPage.DisplayAlert("Éxito", "Operación exitosa", "OK");
+                    await Application.Current.MainPage.DisplayAlert("Éxito", "Operación de actualizar exitosa", "OK");
                 }
                 else
                 {
-                    await Application.Current.MainPage.DisplayAlert("Error", "Operación fallida", "OK");
+                   // await Application.Current.MainPage.DisplayAlert("Error", "Operación de actualizar fallida", "OK");
                 }
 
 
@@ -223,7 +225,7 @@ namespace BeuMobileApp.ViewModels
             }
             else
             {
-
+                Console.WriteLine("Es un nuevo rating");
                 Rating newRating = new Rating
                 {
                     eventid_event = EventId,
@@ -232,13 +234,14 @@ namespace BeuMobileApp.ViewModels
                 };
 
                 var addResult = await eventService.PostRating(newRating);
-                if (addResult != null)
+                Console.Write("RESULTADO POST: " + addResult);
+                if (addResult !=null)
                 {
-                    await Application.Current.MainPage.DisplayAlert("Éxito", "Operación exitosa", "OK");
+                    await Application.Current.MainPage.DisplayAlert("Éxito", "Calificación agregada", "OK");
                 }
                 else
                 {
-                    await Application.Current.MainPage.DisplayAlert("Error", "Operación fallida", "OK");
+                    //await Application.Current.MainPage.DisplayAlert("Error", "No se pudo agregar la calificación", "OK");
                 }
 
 
@@ -268,12 +271,12 @@ namespace BeuMobileApp.ViewModels
                     var updateReview = await eventService.PutReview(reviewUser);
                     if (updateReview != null)
                     {
-                        await Application.Current.MainPage.DisplayAlert("Éxito", "Operación exitosa", "OK");
+                        await Application.Current.MainPage.DisplayAlert("Éxito", "Comentario actualizado", "OK");
 
                     }
                     else
                     {
-                        await Application.Current.MainPage.DisplayAlert("Error", "Operación fallida", "OK");
+                      //  await Application.Current.MainPage.DisplayAlert("Error", "No se pudo actualizar el comentario", "OK");
                     }
                 }
                 else
@@ -287,14 +290,14 @@ namespace BeuMobileApp.ViewModels
                     };
 
                     var createReview = await eventService.PostReview(reviewNewUser);
-                    if (createReview != null)
+                    if (createReview =="OK")
                     {
-                        await Application.Current.MainPage.DisplayAlert("Éxito", "Operación exitosa", "OK");
+                        await Application.Current.MainPage.DisplayAlert("Éxito", "Comentario agregado", "OK");
 
                     }
                     else
                     {
-                        await Application.Current.MainPage.DisplayAlert("Error", "Operación fallida", "OK");
+                        //await Application.Current.MainPage.DisplayAlert("Error", "No se pudo agregar el comentario", "OK");
                     }
                 }
             }

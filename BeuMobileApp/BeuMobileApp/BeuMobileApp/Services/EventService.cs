@@ -2,10 +2,12 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Net.Http;
 using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
 
 namespace BeuMobileApp.Services
 {
@@ -17,7 +19,7 @@ namespace BeuMobileApp.Services
         {
             client = new HttpClient
             {
-                BaseAddress = new Uri("http://192.168.0.6:8081/eventosPUJ/")
+                BaseAddress = new Uri("http://190.156.243.87:8888/eventosPUJ/")
             };
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Add("Accept", "application/json");
@@ -84,13 +86,22 @@ namespace BeuMobileApp.Services
                 
                 string json = JsonConvert.SerializeObject(newReview);
                 StringContent jsoncontent = new StringContent(json, Encoding.UTF8, "application/json");
-                HttpResponseMessage response = await client.PostAsync("comentarioPUJ/comentario/evento", jsoncontent);
+                HttpResponseMessage response = await client.PostAsync("evento/comentario", jsoncontent);
                 if (response.IsSuccessStatusCode)
                 {
                     
                     string content = await response.Content.ReadAsStringAsync();
                     result = content;
 
+                }
+                else if (response.StatusCode == HttpStatusCode.BadRequest)
+                {
+                    result = "Existe";
+                }
+                else if (response.StatusCode == HttpStatusCode.InternalServerError)
+                {
+                    
+                    Console.WriteLine("Error al agregar el ranking. Error interno del servidor.");
                 }
                 else
                 {
@@ -115,14 +126,15 @@ namespace BeuMobileApp.Services
                
                 string json = JsonConvert.SerializeObject(updateReview);
                 StringContent jsoncontent = new StringContent(json, Encoding.UTF8, "application/json");
-                HttpResponseMessage response = await client.PutAsync("comentarioPUJ/comentario/evento", jsoncontent);
+                HttpResponseMessage response = await client.PutAsync("evento/comentario", jsoncontent);
                 if (response.IsSuccessStatusCode)
                 {
-                   
+
                     string content = await response.Content.ReadAsStringAsync();
                     result = content;
 
                 }
+                
                 else
                 {
                     Console.WriteLine("Error al actualizar comentario: " + response.StatusCode);
@@ -142,16 +154,16 @@ namespace BeuMobileApp.Services
             try
             {
 
-                HttpResponseMessage response = await client.GetAsync("ratingPUJ/evento/usuario/"+IdUs+"/"+IdEvent);
+                HttpResponseMessage response = await client.GetAsync("califacion/evento/usuario/" +IdUs+"/"+IdEvent);
                 if (response.IsSuccessStatusCode)
                 {
                   
                     string content = await response.Content.ReadAsStringAsync();
                     rtn = JsonConvert.DeserializeObject<Rating>(content);
                 }
-                else
+                else if (response.StatusCode == HttpStatusCode.BadRequest)
                 {
-                    Console.WriteLine("Error al obtener rating: " + response.StatusCode);
+                    rtn = null;
                 }
             }
             catch (Exception ex)
@@ -172,13 +184,22 @@ namespace BeuMobileApp.Services
                
                 string json = JsonConvert.SerializeObject(newRating);
                 StringContent jsoncontent = new StringContent(json, Encoding.UTF8, "application/json");
-                HttpResponseMessage response = await client.PostAsync("ratingPUJ/evento/rating", jsoncontent);
+                HttpResponseMessage response = await client.PostAsync("evento/rating", jsoncontent);
                 if (response.IsSuccessStatusCode)
                 {
-                   
+
                     string content = await response.Content.ReadAsStringAsync();
                     result = content;
 
+                }
+                else if (response.StatusCode == HttpStatusCode.BadRequest)
+                {
+                    result = "Existe";
+                }
+                else if (response.StatusCode == HttpStatusCode.InternalServerError)
+                {
+
+                    Console.WriteLine("Error al agregar el ranking. Error interno del servidor.");
                 }
                 else
                 {
@@ -204,7 +225,7 @@ namespace BeuMobileApp.Services
                
                 string json = JsonConvert.SerializeObject(updateRating);
                 StringContent jsoncontent = new StringContent(json, Encoding.UTF8, "application/json");
-                HttpResponseMessage response = await client.PutAsync("ratingPUJ/evento/rating", jsoncontent);
+                HttpResponseMessage response = await client.PutAsync("rating", jsoncontent);
                 if (response.IsSuccessStatusCode)
                 {
                     
@@ -234,7 +255,7 @@ namespace BeuMobileApp.Services
             try
             {
 
-                HttpResponseMessage response = await client.GetAsync("actividadesPUJ/actividades/evento/"+idEvnt);
+                HttpResponseMessage response = await client.GetAsync("actividad/" + idEvnt);
                 if (response.IsSuccessStatusCode)
                 {
 

@@ -1,2 +1,2 @@
-AdbTarget=-s ZY32GFKCVV
+AdbTarget=-s emulator-5554
 AdbOptions=

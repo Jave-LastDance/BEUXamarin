@@ -3,6 +3,7 @@ using BeuMobileApp.Services;
 using BeuMobileApp.Views;
 using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -46,6 +47,13 @@ namespace BeuMobileApp.ViewModels
         {
             try
             {
+
+                if (string.IsNullOrWhiteSpace(Username) || string.IsNullOrWhiteSpace(Password))
+                {
+                    
+                    await Application.Current.MainPage.DisplayAlert("Error", "Por favor, ingrese nombre de usuario y contraseña.", "OK");
+                    return;
+                }
                 string apiUrl = "http://190.156.243.87:8888/auth/login";
                 string jsonData = $"{{\"username\":\"{Username}\", \"password\":\"{Password}\"}}";
 
@@ -58,14 +66,14 @@ namespace BeuMobileApp.ViewModels
                     {
                         string responseBody = await response.Content.ReadAsStringAsync();
                         UserResponse userResponse = Newtonsoft.Json.JsonConvert.DeserializeObject<UserResponse>(responseBody);
-
+                        
                         if (userResponse != null && userResponse.id > 0)
                         {
                             App.CurrentUser = userResponse;
 
-                            int UserSession = userResponse.id;
+                            UserSession.IdUsuario = userResponse.id;
                            
-                            var pref = await personalizationService.GetPreferencesUser(UserSession);
+                            var pref = await personalizationService.GetPreferencesUser(UserSession.IdUsuario);
 
                             if (pref != null && pref.Count > 0)
                             {
@@ -78,14 +86,19 @@ namespace BeuMobileApp.ViewModels
 
 
                         }
-                        else
-                        {
-                            await Application.Current.MainPage.DisplayAlert("Error", "Credenciales incorrectas. Por favor, inténtelo de nuevo.", "OK");
-                        }
+                        
+                    }
+                    Console.WriteLine("CODIGO RTA: " + response.StatusCode);
+
+                    if (response.StatusCode == HttpStatusCode.InternalServerError)
+                    {
+                        await Application.Current.MainPage.DisplayAlert("Error", "Credenciales incorrectas. Por favor, inténtelo de nuevo.", "OK");
                     }
                     else
                     {
-                        await Application.Current.MainPage.DisplayAlert("Error", "No se pudo conectar al servidor. Por favor, inténtelo de nuevo más tarde.", "OK");
+                       
+                        
+                       
                     }
                 }
             }

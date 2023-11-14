@@ -33,6 +33,7 @@ namespace BeuMobileApp.ViewModels
 
         private int notificationId;
 
+        public Command NotificationDeleteCommand { get; }
 
         public Command EventTapCommand { get; }
 
@@ -55,6 +56,7 @@ namespace BeuMobileApp.ViewModels
             eventService = new EventService();
             notificationService = new NotificationService();
             EventTapCommand = new Command(EventTapCallback);
+            NotificationDeleteCommand = new Command(DeleteNotification);
         }
         async void LoadNotificationData(int notificationId)
         {
@@ -62,6 +64,7 @@ namespace BeuMobileApp.ViewModels
 
             if (selectedNotification != null)
             {
+                Console.WriteLine("ESTO ES LO QUE ME LLEGA : " + selectedNotification.Title);
                 Title = selectedNotification.Title;
                 Body = selectedNotification.Body;
                 Image = selectedNotification.Image;
@@ -103,6 +106,16 @@ namespace BeuMobileApp.ViewModels
         async void EventTapCallback()
         {
             await Shell.Current.GoToAsync($"{nameof(EventDetailView)}" + $"?{nameof(EventDetailViewModel.EventIndex)}={IdEvent}");
+        }
+
+        async void DeleteNotification() {
+            Console.WriteLine("Este es el id de la ntoficiacion " + notificationId);
+            var deleteNotification = await notificationService.DeleteNotification(notificationId);
+            if (deleteNotification != null)
+            {
+                await Application.Current.MainPage.DisplayAlert("Éxito", "Se eliminó correctamente", "OK");
+                await Shell.Current.GoToAsync($"//{nameof(NotificationView)}");
+            }
         }
     }
 }

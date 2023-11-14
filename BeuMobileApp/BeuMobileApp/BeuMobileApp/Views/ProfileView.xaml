@@ -22,14 +22,14 @@
                 <StackLayout Grid.Row="0" HorizontalOptions="Center" VerticalOptions="Center">
                     <Frame Margin="10"
                    BorderColor="#00a8ff"
-                   CornerRadius="150"
+                   CornerRadius="100"
                    HeightRequest="200"
                    WidthRequest="200"
                    IsClippedToBounds="True">
                         <Image Source="{Binding CurrentUser.photo}"
                        BackgroundColor="#ffffff"
                        Aspect="AspectFill"
-                       Margin="-8"
+                       
                        HeightRequest="100"
                        WidthRequest="100" />
                     </Frame>
@@ -49,21 +49,21 @@
                 <!-- Botones en la parte blanca -->
                 <StackLayout Grid.Row="1" BackgroundColor="White">
                     <Button Text="Detalles cuenta" 
-                    BackgroundColor="#D8C72F" 
+                    BackgroundColor="#FFD24C" 
                     TextColor="White" 
                     Margin="20, 30, 20, 10"
                     CornerRadius="20" 
                     Clicked="DetallesCuentaButton_Clicked"/>
 
                     <Button Text="Preferencias" 
-                    BackgroundColor="#21BDA1" 
+                    BackgroundColor="#FFD24C" 
                     TextColor="White" 
                     Margin="20, 10, 20, 10"
                     CornerRadius="20"
                     Command="{Binding CJFDCommand}"/>
 
                     <Button Text="Cerrar Sesión" 
-                    BackgroundColor="#EBA946" 
+                    BackgroundColor="#FFD24C" 
                     TextColor="White" 
                     Margin="20, 10, 20, 10"
                     CornerRadius="20" 

@@ -48,7 +48,7 @@ namespace BeuMobileApp
           
 
             FirebaseToken.TokenUser = CrossFirebasePushNotification.Current.Token;
-
+            Console.WriteLine("TOKEN TELEFONO" +FirebaseToken.TokenUser);
 
             
 
