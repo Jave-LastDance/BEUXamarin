@@ -13,6 +13,7 @@ public class MainActivity
 		__md_methods = 
 			"n_onCreate:(Landroid/os/Bundle;)V:GetOnCreate_Landroid_os_Bundle_Handler\n" +
 			"n_onRequestPermissionsResult:(I[Ljava/lang/String;[I)V:GetOnRequestPermissionsResult_IarrayLjava_lang_String_arrayIHandler\n" +
+			"n_onResume:()V:GetOnResumeHandler\n" +
 			"n_onDestroy:()V:GetOnDestroyHandler\n" +
 			"n_getApplicationContext:()Landroid/content/Context;:GetGetApplicationContextHandler:AltBeaconOrg.BoundBeacon.IBeaconConsumerInvoker, AndroidAltBeaconLibrary\n" +
 			"n_bindService:(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z:GetBindService_Landroid_content_Intent_Landroid_content_ServiceConnection_IHandler:AltBeaconOrg.BoundBeacon.IBeaconConsumerInvoker, AndroidAltBeaconLibrary\n" +
@@ -55,6 +56,14 @@ public class MainActivity
 	}
 
 	private native void n_onRequestPermissionsResult (int p0, java.lang.String[] p1, int[] p2);
+
+
+	public void onResume ()
+	{
+		n_onResume ();
+	}
+
+	private native void n_onResume ();
 
 
 	public void onDestroy ()

@@ -10,6 +10,7 @@ using Plugin.Permissions;
 using BeuMobileApp.InterfaceBeacons;
 using Xamarin.Forms;
 using Plugin.FirebasePushNotification;
+using Android.Content;
 
 namespace BeuMobileApp.Droid
 {
@@ -28,6 +29,10 @@ namespace BeuMobileApp.Droid
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
             FirebasePushNotificationManager.ProcessIntent(this, Intent);
+
+            //Beacons signal
+           // var intent = new Intent(this, typeof(BeaconMonitoringService));
+            //StartForegroundService(intent);
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
@@ -35,11 +40,18 @@ namespace BeuMobileApp.Droid
             PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
-
+        protected override void OnResume()
+        {
+            base.OnResume();
+            // Start the service when the activity is about to become visible
+            var intent = new Intent(this, typeof(BeaconMonitoringService));
+            StartForegroundService(intent);
+        }
         protected override void OnDestroy()
         {
             base.OnDestroy();
-            DependencyService.Get<IbeaconAndroid>().OnDestroy();
+            //DependencyService.Get<IbeaconAndroid>().OnDestroy();
+
         }
 
         void IBeaconConsumer.OnBeaconServiceConnect()

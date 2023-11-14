@@ -2065,6 +2065,7 @@ C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobile
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\android\src\com\google\android\material\snackbar\Snackbar_SnackbarActionClickImplementor.java
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\android\src\com\google\firebase\messaging\R.java
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\android\src\crc6405fc9578de4bed43\AltBeaconService.java
+C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\android\src\crc6405fc9578de4bed43\BeaconMonitoringService.java
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\android\src\crc6405fc9578de4bed43\MainActivity.java
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\android\src\crc6405fc9578de4bed43\MainApplication.java
 C:\Users\marir\Desktop\BeuXamarin\BEUXamarin\BeuMobileApp\BeuMobileApp\BeuMobileApp.Android\obj\Debug\130\android\src\crc6405fc9578de4bed43\MonitorNotifier.java

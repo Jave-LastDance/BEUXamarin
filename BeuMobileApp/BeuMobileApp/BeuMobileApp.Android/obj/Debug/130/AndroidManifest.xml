@@ -14,6 +14,7 @@
   <uses-permission android:name="android.permission.BLUETOOTH" />
   <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
   <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+  <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <application android:label="BeuMobileApp.Android" android:theme="@style/MainTheme" android:usesCleartextTraffic="true" android:name="android.app.Application" android:allowBackup="true" android:icon="@mipmap/icon" android:debuggable="true" android:extractNativeLibs="true">
     <!-- Aquí se añade el receiver necesario -->
@@ -23,9 +24,10 @@
         <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
       </intent-filter>
     </receiver>
-    <service android:name=".services.BeaconDetectionService" android:exported="false" android:enabled="true"></service>
+    <service android:name=".BeaconMonitoringService" android:exported="false" android:permission="android.permission.FOREGROUND_SERVICE" />
     <!-- Aquí se pueden agregar otros componentes de la aplicación, como activities, services, etc. -->
     <uses-library android:name="org.apache.http.legacy" android:required="false" />
+    <service android:name="crc6405fc9578de4bed43.BeaconMonitoringService" />
     <activity android:configChanges="orientation|smallestScreenSize|screenLayout|screenSize|uiMode" android:icon="@mipmap/icon" android:label="BeuMobileApp" android:theme="@style/MainTheme" android:name="crc6405fc9578de4bed43.MainActivity" android:exported="true">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />

@@ -34,7 +34,9 @@ namespace BeuMobileApp.Services
 
                     string content = await response.Content.ReadAsStringAsync();
                     evn = JsonConvert.DeserializeObject<BeaconBEU>(content);
-                }
+                    Console.WriteLine("Deserialized BeaconBEU Object: " + JsonConvert.SerializeObject(evn));
+                
+            }
                 else
                 {
                     Console.WriteLine("Error al obtener beacon: " + response.StatusCode);

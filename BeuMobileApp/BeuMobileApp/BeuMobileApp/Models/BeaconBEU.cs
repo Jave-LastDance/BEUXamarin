@@ -8,7 +8,7 @@ namespace BeuMobileApp.Models
     {
         public string id { set; get; }
         public string neighbors { set; get; }
-        public int idBuilding { set; get; }
+        public int id_building { set; get; }
         public string supplier { set; get; }
         public string color { set; get; }
     }

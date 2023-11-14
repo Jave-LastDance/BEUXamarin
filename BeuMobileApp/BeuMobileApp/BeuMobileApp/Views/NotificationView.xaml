@@ -19,7 +19,12 @@
         <CollectionView ItemsSource="{Binding Notifications}"
                         Margin="16"
                         >
-            
+            <CollectionView.Header>
+                <StackLayout VerticalOptions="Center" Margin="20">
+                    <Button VerticalOptions="Center" Text="Notificaciones" Command="{Binding NotificationCommand}"/>
+
+                </StackLayout>
+            </CollectionView.Header>
             <CollectionView.ItemsLayout>
                 <LinearItemsLayout Orientation="Vertical"
                                    ItemSpacing="15"/>
